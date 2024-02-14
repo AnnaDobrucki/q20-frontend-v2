@@ -1,9 +1,10 @@
+import Button from "react-bootstrap/Button";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Welcome to Q20</h1>
+      <Button variant="primary">Test Button</Button>
     </div>
   );
 }
