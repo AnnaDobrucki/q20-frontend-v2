@@ -5,6 +5,10 @@
     font-size: 22px;
     font-weight: bold;
   }
+
+  .Main {
+    padding-top: 95px;
+  }
   
   * {
     box-sizing: border-box;

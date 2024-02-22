@@ -14,7 +14,7 @@
 }
 
 .NavBar i {
-  color: #ffffff;
+  color: #2C28B0;
   padding: 0px 8px 0px 8px;
   vertical-align: middle;
   font-size: 1.1rem;
@@ -40,5 +40,9 @@
   font-size: 1.4rem;
   vertical-align: middle;
   padding: 5px;
+}
+
+.Active i {
+  color: #ec8004;
 }
 
