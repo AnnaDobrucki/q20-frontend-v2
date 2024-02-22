@@ -1,6 +1,6 @@
 .NavBar {
   font-family: "Varela Round", sans-serif;
-  background-color: #1a710d;
+  background-color: #D278C7;
 }
 
 .NavBar a:hover {
@@ -9,7 +9,7 @@
 }
 
 .NavBar a:hover i {
-  color: #EB6720;
+  color: #E8530C;
   transition: color ease-in-out 0.3s;
 }
 
@@ -43,6 +43,6 @@
 }
 
 .Active i {
-  color: #ec8004;
+  color: #E8530C;
 }
 
