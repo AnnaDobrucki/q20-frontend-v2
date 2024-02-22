@@ -1,0 +1,44 @@
+.NavBar {
+  font-family: "Varela Round", sans-serif;
+  background-color: #1a710d;
+}
+
+.NavBar a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.NavBar a:hover i {
+  color: #EB6720;
+  transition: color ease-in-out 0.3s;
+}
+
+.NavBar i {
+  color: #ffffff;
+  padding: 0px 8px 0px 8px;
+  vertical-align: middle;
+  font-size: 1.1rem;
+}
+
+.NavBar i:hover {
+  cursor: pointer;
+  transition: color ease-in-out 0.3s;
+  color: #C70FBA;
+}
+
+.NavBar span {
+  vertical-align: middle;
+}
+
+.NavBrand span {
+  color: #231898;
+  font-size: 30px;
+  vertical-align: middle;
+}
+
+.NavBrand i {
+  font-size: 1.4rem;
+  vertical-align: middle;
+  padding: 5px;
+}
+
