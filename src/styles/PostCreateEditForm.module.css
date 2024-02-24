@@ -2,11 +2,3 @@
     min-height: 343px;
   }
 
-.smallerImage {
-    width: 100px; 
-    height: 100px; 
-  }
-  
-.roundedImage {
-    border-radius: 50%; 
-  }
