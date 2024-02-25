@@ -7,7 +7,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 import { ProfileDataProvider } from "./contexts/ProfileDataContext";
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Router>
