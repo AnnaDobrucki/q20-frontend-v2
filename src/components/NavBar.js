@@ -48,6 +48,12 @@ const NavBar = () => {
         <i className="fas fa-stream"></i>Feed
       </NavLink>
       <NavLink
+        to="/dndevents"
+        className={styles.Navlink}
+        activeClassName={styles.Active}>
+        <i className="fa-solid fa-calendar-days"></i>DnD Time!
+      </NavLink>
+      <NavLink
         className={styles.NavLink}
         activeClassName={styles.Active}
         to="/liked"
