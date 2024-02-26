@@ -14,9 +14,9 @@ import ProfilePage from "./pages/profiles/ProfilePage";
 import UsernameForm from "./pages/profiles/UsernameForm";
 import UserPasswordForm from "./pages/profiles/UserPasswordForm";
 import ProfileEditForm from "./pages/profiles/ProfileEditForm";
-import DNDEvent from "./pages/dnd_events/Dnd_event";
 import DndEventsPage from "./pages/dnd_events/Dnd_EventsPages";
 import DndEventCreateForm from "./pages/dnd_events/Dnd_CreateForm";
+import DndEventPage from "./pages/dnd_events/Dnd_EventPage";
 
 
 function App() {
@@ -72,7 +72,9 @@ function App() {
             exact
             path="/dndevents/create"
             render={() => <DndEventCreateForm />}
-          />          <Route
+          />  
+          <Route exact path="/dndevents/:id" render={() => <DndEventPage />} />      
+            <Route
             exact
             path="/profiles/:id/edit/username"
             render={() => <UsernameForm />}

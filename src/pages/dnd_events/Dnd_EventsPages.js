@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Row, Col, Container } from "react-bootstrap";
-import DndEvent from "./Dnd_event";
+import DNDEvent from "./Dnd_event";
 import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
 import styles from "../../styles/DndEventsPage.module.css";
@@ -23,11 +23,11 @@ function DndEventsPage({ message }) {
   useEffect(() => {
     const fetchDndEvents = async () => {
       try {
-        const { data } = await axiosReq.get(`/dndevents/?search=${query}`);
+        const { data } = await axiosReq.get(`/dnd_events/?search=${query}`);
         setDndEvents(data);
         setHasLoaded(true);
       } catch (err) {
-        // console.log(err);
+        console.log(err);
       }
     };
   
@@ -71,7 +71,7 @@ function DndEventsPage({ message }) {
                 next={() => fetchMoreData(dndEvents, setDndEvents)}
               >
                 {dndEvents.results.map((dndEvent) => (
-                  <DndEvent key={dndEvent.id} {...dndEvent} setDndEvents={setDndEvents} />
+                  <DNDEvent key={dndEvent.id} {...dndEvent} setDndEvents={setDndEvents} />
                 ))}
               </InfiniteScroll>
             ) : (

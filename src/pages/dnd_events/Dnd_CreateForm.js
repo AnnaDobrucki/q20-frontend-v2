@@ -40,9 +40,10 @@ function DndEventCreateForm() {
       formDataToSend.append(key, formData[key]);
     }
     try {
-      const { data } = await axiosReq.post("/dndevents/", formDataToSend);
-      history.push(`/dndevents/${data.id}`);
+      const { data } = await axiosReq.post("/dnd_events/", formDataToSend);
+      history.push(`/events/${data.id}`);
     } catch (err) {
+      console.log(err.response)
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
@@ -162,13 +163,7 @@ function DndEventCreateForm() {
             </Form.Group>
           </Col>
         </Row>
-        {errors && (
-          <Alert variant="danger">
-            {Object.values(errors).map((error, index) => (
-              <p key={index}>{error}</p>
-            ))}
-          </Alert>
-        )}
+
         <Button type="submit">Create Adventure!</Button>
       </Form>
     </Container>

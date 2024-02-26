@@ -45,12 +45,12 @@ const DNDEvent = (props) => {
   const history = useHistory();
 
   const handleEdit = () => {
-    history.push(`/events/${id}/edit`);
+    history.push(`/dnd_events/${id}/edit`);
   };
 
   const handleDelete = async () => {
     try {
-      await axiosRes.delete(`/events/${id}/`);
+      await axiosRes.delete(`/dnd_events/${id}/`);
       history.goBack();
     } catch (err) {
       // Handle error
