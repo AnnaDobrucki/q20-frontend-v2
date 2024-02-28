@@ -5,6 +5,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosReq } from "../../api/axiosDefaults";
 import PopularProfiles from "../profiles/PopularProfiles";
 import DNDEvent from "./Dnd_event";
+import styles from "../../styles/DndEventsPage.module.css";
 import AddEventButton from "../../components/AddEventButton";
 
 function DndEventPage() {
@@ -26,14 +27,14 @@ function DndEventPage() {
   }, [id]);
 
   return (
-    <Container>
+    <Container className={`${styles.Event} pt-3`}>
       <Row>
         <Col>
           <PopularProfiles mobile />
           {currentUser && (
             <AddEventButton url="/dndevents/create" text="Create Event" mobile />
           )}
-          {dndEvent && <DNDEvent {...dndEvent} />}
+          {dndEvent && <DNDEvent {...dndEvent} dnd_eventPage/>}
         </Col>
         <Col>
           {currentUser && (

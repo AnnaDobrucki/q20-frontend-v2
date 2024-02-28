@@ -36,7 +36,7 @@ const DNDEvent = (props) => {
     email,
     phone,
     address,
-    eventPage,
+    dnd_eventPage,
     setEvents,
   } = props;
 
@@ -109,7 +109,7 @@ const DNDEvent = (props) => {
           </div>
           <div className="d-flex align-items-center">
             <span>{updated_at}</span>
-            {is_owner && eventPage && (
+            {is_owner && dnd_eventPage && (
               <MoreDropdown
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}

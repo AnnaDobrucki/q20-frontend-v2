@@ -71,7 +71,7 @@ function DndEventsPage({ message }) {
                 next={() => fetchMoreData(dndEvents, setDndEvents)}
               >
                 {dndEvents.results.map((dndEvent) => (
-                  <DNDEvent key={dndEvent.id} {...dndEvent} setDndEvents={setDndEvents}
+                  <DNDEvent key={dndEvent.id} {...dndEvent} setDndEvents={setDndEvents}  dnd_eventPage
                    />
                 ))}
               </InfiniteScroll>
