@@ -99,7 +99,7 @@ const DNDEvent = (props) => {
 
   return (
     <Card className={styles.Event}>
-      <Card.Body>
+      <Card.Body >
         <Media className="align-items-center justify-content-between">
           <div>
             <Link to={`/profiles/${profile_id}`}>
@@ -119,8 +119,8 @@ const DNDEvent = (props) => {
         </Media>
       </Card.Body>
       <Card.Img src={image} alt={game_name} />
-      <Card.Body>
-        <Link to={`/events/${id}`}>
+      <Card.Body >
+        <Link to={`/dnd_events/${id}`}>
           <Card.Title className={`text-center ${styles.Heading}`}>
             {game_name}
           </Card.Title>
@@ -172,7 +172,7 @@ const DNDEvent = (props) => {
           </Col>
           <Col>
             <Card.Header className={styles.ListHeader}>
-              Organiser Details
+              Game Details
             </Card.Header>
             <ListGroup className="justify-content-md-center">
               {game_master && (

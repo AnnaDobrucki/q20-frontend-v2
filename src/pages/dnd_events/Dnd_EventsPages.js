@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Form, Row, Col, Container } from "react-bootstrap";
+import { Form, Row, Col, Container, } from "react-bootstrap";
 import DNDEvent from "./Dnd_event";
 import Asset from "../../components/Asset";
 import appStyles from "../../App.module.css";
@@ -44,7 +44,7 @@ function DndEventsPage({ message }) {
 
   return (
     <Row>
-      <Col>
+      <Col className={`${styles.Event} pt-3`}>
         <PopularProfiles mobile />
         {currentUser && (
           <AddEventButton url="/dndevents/create" text="Create Event" mobile />
@@ -60,7 +60,7 @@ function DndEventsPage({ message }) {
             type="text"
             placeholder="Search DnD Events"
           />
-        </Form>
+        </Form >
         {hasLoaded ? (
           <>
             {dndEvents.results.length ? (
@@ -71,7 +71,8 @@ function DndEventsPage({ message }) {
                 next={() => fetchMoreData(dndEvents, setDndEvents)}
               >
                 {dndEvents.results.map((dndEvent) => (
-                  <DNDEvent key={dndEvent.id} {...dndEvent} setDndEvents={setDndEvents} />
+                  <DNDEvent key={dndEvent.id} {...dndEvent} setDndEvents={setDndEvents}
+                   />
                 ))}
               </InfiniteScroll>
             ) : (
@@ -81,12 +82,12 @@ function DndEventsPage({ message }) {
             )}
           </>
         ) : (
-          <Container className={appStyles.Content}>
+          <Container className={appStyles.Content} >
             <Asset spinner />
           </Container>
         )}
       </Col>
-      <Col>
+      <Col className={`${styles.Event} pt-3`}>
         {currentUser && (
           <AddEventButton url="/dndevents/create" text="Create Event" />
         )}

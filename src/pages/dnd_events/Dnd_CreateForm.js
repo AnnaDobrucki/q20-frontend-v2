@@ -3,6 +3,7 @@ import { Form, Button, Row, Col, Container, Image, Alert } from "react-bootstrap
 import UploadImage from "../../assets/placeholder.jpg";
 import styles from "../../styles/DndEventsPage.module.css";
 import { useHistory } from "react-router-dom";
+import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -41,7 +42,7 @@ function DndEventCreateForm() {
     }
     try {
       const { data } = await axiosReq.post("/dnd_events/", formDataToSend);
-      history.push(`/events/${data.id}`);
+      history.push(`/dndevents/${data.id}`);
     } catch (err) {
       console.log(err.response)
       if (err.response?.status !== 401) {
@@ -49,7 +50,6 @@ function DndEventCreateForm() {
       }
     }
   };
-
   return (
     <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "100vh" }}>
       <Form onSubmit={handleSubmit}>
@@ -132,8 +132,8 @@ function DndEventCreateForm() {
               <Form.Label>Game Master!?</Form.Label>
               <Form.Control
                 type="text"
-                name="game_master "
-                value={formData.game_master }
+                name="game_master"
+                value={formData.game_master}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -163,8 +163,19 @@ function DndEventCreateForm() {
             </Form.Group>
           </Col>
         </Row>
-
+        <Row className="mb-3 justify-content-end"> 
+      <Col>
         <Button type="submit">Create Adventure!</Button>
+      </Col>
+      <Col>
+        <Button
+          className={`${btnStyles.ButtonGame} ${btnStyles.LightRed}`}
+          onClick={() => history.goBack()}
+        >
+          Cancel Greatness
+        </Button>
+      </Col>
+    </Row>
       </Form>
     </Container>
   );

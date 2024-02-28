@@ -26,6 +26,11 @@
   .Button:focus {
     background-color: #2142b2;
   }
+
+  .ButtonGame {
+    padding-left: 10px;
+
+  }
   
   .Wide {
     padding: 10px 50px;
