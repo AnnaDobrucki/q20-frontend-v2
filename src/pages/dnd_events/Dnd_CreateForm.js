@@ -10,14 +10,14 @@ function DndEventCreateForm() {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
-    name: "",
-    description: "",
+    game_name: "",
+    game_description: "",
     image: null,
-    location: "",
+    event_location: "",
     date: "",
-    startTime: "",
-    endTime: "",
-    organizer: "",
+    event_start: "",
+    event_end: "",
+    game_master : "",
     contact: "",
   });
 
@@ -59,8 +59,8 @@ function DndEventCreateForm() {
               <Form.Label>Name of Adventure!</Form.Label>
               <Form.Control
                 type="text"
-                name="name"
-                value={formData.name}
+                name="game_name"
+                value={formData.game_name}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -71,8 +71,8 @@ function DndEventCreateForm() {
               <Form.Control
                 as="textarea"
                 rows={4}
-                name="description"
-                value={formData.description}
+                name="game_description"
+                value={formData.game_description}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -84,8 +84,8 @@ function DndEventCreateForm() {
               <Form.Label>Location</Form.Label>
               <Form.Control
                 type="text"
-                name="location"
-                value={formData.location}
+                name="event_location"
+                value={formData.event_location}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -108,8 +108,8 @@ function DndEventCreateForm() {
               <Form.Label>Start Time</Form.Label>
               <Form.Control
                 type="time"
-                name="startTime"
-                value={formData.startTime}
+                name="event_start"
+                value={formData.event_start}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -119,8 +119,8 @@ function DndEventCreateForm() {
               <Form.Label>End Time</Form.Label>
               <Form.Control
                 type="time"
-                name="endTime"
-                value={formData.endTime}
+                name="event_end"
+                value={formData.event_end}
                 onChange={handleChange}
               />
             </Form.Group>
@@ -132,8 +132,8 @@ function DndEventCreateForm() {
               <Form.Label>Game Master!?</Form.Label>
               <Form.Control
                 type="text"
-                name="organizer"
-                value={formData.organizer}
+                name="game_master "
+                value={formData.game_master }
                 onChange={handleChange}
               />
             </Form.Group>
