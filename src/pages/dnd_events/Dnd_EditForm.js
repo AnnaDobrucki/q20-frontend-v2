@@ -7,7 +7,7 @@ import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
-function DndEventCreateForm() {
+function DndEventEditForm() {
   useRedirect("loggedOut");
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
@@ -226,4 +226,4 @@ function DndEventCreateForm() {
   );
 }
 
-export default DndEventCreateForm;
+export default DndEventEditForm;

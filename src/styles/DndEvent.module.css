@@ -1,0 +1,103 @@
+.Event {
+    background-color: #fafafa;
+    border: 1px solid #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.EventBar {
+    margin-top: 15px;
+    padding-top: 8px;
+    border-top: 1px solid #fff;
+}
+
+.Event figure,
+h5 {
+    margin: 0 0;
+}
+
+.EventInf {
+    color: hwb(335 15% 13%);
+}
+
+.EventIcons:hover {
+    color: hwb(335 15% 13%);
+}
+
+.ListHeader {
+    background-color: #55008d;
+    color: #fafafa;
+}
+
+.Heading {
+    color: #821ade;
+    font-weight: bold;
+}
+
+.OwnEvent:hover {
+    color: #3a3a3a;
+}
+
+.contactItem {
+    font-size: 14px;
+    margin-bottom: 10px;
+    overflow: auto;
+  }
+
+  .contactItem::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .contactItem::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .contactItem::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 7px; 
+  }
+  
+  .contactItem::-webkit-scrollbar-thumb:hover {
+    background: #821ade;
+  }
+
+.Responded {
+    color: #8d2b00;
+}
+
+.RemovedResp {
+    color: #08c564;
+}
+
+.Button {
+    font-family: 'Goudy Bookletter 1911', serif;
+    background-color: #8d2b00;
+    border-radius: 100px;
+    border-color: #8d2b00;
+}
+
+.Button:hover {
+    border-color: transparent;
+    cursor: pointer;
+    background-color: #8d2b00;
+}
+
+.Button:hover:active {
+    background-color: #8d2b00 !important;
+}
+
+.Button:active {
+    background-color: #8d2b00 !important;
+    border-style: none;
+}
+
+.Button:focus {
+    background-color: #8d2b00;
+    border-style: none;
+}
+
+.Modal {
+    font-family: 'Goudy Bookletter 1911', serif;
+    color: #030303
+}
