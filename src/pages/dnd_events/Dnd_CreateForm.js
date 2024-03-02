@@ -13,7 +13,7 @@ function DndEventCreateForm() {
   const [formData, setFormData] = useState({
     game_name: "",
     game_description: "",
-    image: null,
+    image: "",
     event_location: "",
     date: "",
     event_start: "",

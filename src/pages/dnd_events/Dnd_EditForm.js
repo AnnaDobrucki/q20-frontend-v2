@@ -1,8 +1,8 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect} from "react";
 import { Form, Button, Row, Col, Container, Image, Alert } from "react-bootstrap";
 import UploadImage from "../../assets/placeholder.jpg";
 import styles from "../../styles/DndEventsPage.module.css";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
@@ -13,7 +13,7 @@ function DndEventEditForm() {
   const [formData, setFormData] = useState({
     game_name: "",
     game_description: "",
-    image: null,
+    image: "",
     event_location: "",
     date: "",
     event_start: "",
@@ -24,14 +24,46 @@ function DndEventEditForm() {
 
   const history = useHistory();
   const imageInputRef = useRef(null);
+  const {id} = useParams();
+
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/dnd_events/${id}/`);
+
+        console.log(data)
+
+        const { game_name, game_master, event_end, event_location,
+             event_start, date, game_description, image, contact, is_owner} = data;
+
+        is_owner ? setFormData({ game_name, game_master, event_end, event_location,
+             event_start, date, game_description, image, contact }) : history.push("/");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleImageChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
+  const handleImageChange = (event) => {
+    if (event.target.files.length) {
+      setFormData({
+        ...formData,
+        image: URL.createObjectURL(event.target.files[0]),
+      });
+    } else {
+      setFormData({
+        ...formData,
+        image: formData.image,
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -41,8 +73,8 @@ function DndEventEditForm() {
       formDataToSend.append(key, formData[key]);
     }
     try {
-      const { data } = await axiosReq.post("/dnd_events/", formDataToSend);
-      history.push(`/dndevents/${data.id}`);
+    await axiosReq.put(`/dnd_events/${id}`, formDataToSend);
+      history.push(`/dndevents/${id}`);
     } catch (err) {
       console.log(err.response)
       if (err.response?.status !== 401) {
@@ -210,14 +242,14 @@ function DndEventEditForm() {
         </Row>
         <Row className="mb-3 justify-content-end"> 
       <Col>
-        <Button type="submit">Create Adventure!</Button>
+        <Button type="submit">Save Adventure!</Button>
       </Col>
       <Col>
         <Button
           className={`${btnStyles.ButtonGame} ${btnStyles.LightRed}`}
           onClick={() => history.goBack()}
         >
-          Cancel Greatness
+          Cancel Edit
         </Button>
       </Col>
     </Row>

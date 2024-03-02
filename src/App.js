@@ -77,7 +77,7 @@ function App() {
           <Route exact path="/dndevents/:id" render={() => <DndEventPage />} /> 
           <Route
             exact
-            path="/dndeventsevents/:id/edit"
+            path="/dndevents/:id/edit" 
             render={() => <DndEventEditForm/>}
           />
             <Route
