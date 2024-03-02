@@ -13,6 +13,14 @@
   transition: color ease-in-out 0.3s;
 }
 
+.NavLinkOne {
+  padding-top: 7px;
+}
+
+.NavLinkTwo {
+  padding-top: 2px;
+}
+
 .NavBar i {
   color: #2C28B0;
   padding: 0px 8px 0px 8px;
@@ -45,4 +53,6 @@
 .Active i {
   color: #E8530C;
 }
+
+
 

@@ -41,7 +41,7 @@ const NavBar = () => {
   const loggedInIcons = (
     <>
       <NavLink
-        className={styles.NavLink}
+        className={styles.NavLinkOne}
         activeClassName={styles.Active}
         to="/feed"
       >
@@ -49,22 +49,22 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         to="/dndevents"
-        className={styles.Navlink}
+        className={styles.NavLinkOne}
         activeClassName={styles.Active}>
         <i className="fa-solid fa-calendar-days"></i>DnD Time!
       </NavLink>
       <NavLink
-        className={styles.NavLink}
+        className={styles.NavLinkOne}
         activeClassName={styles.Active}
         to="/liked"
       >
         <i className="fas fa-heart"></i>Liked
       </NavLink>
-      <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
+      <NavLink className={styles.NavLinkOne} to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
       <NavLink
-        className={styles.NavLink}
+        className={styles.NavLinkTwo}
         to={`/profiles/${currentUser?.profile_id}`}
       >
         <Avatar src={currentUser?.profile_image} text="Profile" height={40} />
@@ -112,7 +112,7 @@ const NavBar = () => {
           <Nav className="ml-auto text-left">
             <NavLink
               exact
-              className={styles.NavLink}
+              className={styles.NavLinkOne}
               activeClassName={styles.Active}
               to="/"
             >
