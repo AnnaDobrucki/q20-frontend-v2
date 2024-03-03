@@ -23,7 +23,7 @@ const DNDEvent = (props) => {
     owner,
     profile_id,
     profile_image,
-    reply_id,
+    replies_id,
     replies_count,
     game_name,
     game_description,
@@ -67,7 +67,7 @@ const DNDEvent = (props) => {
             ? {
                 ...event,
                 replies_count: event.replies_count + 1,
-                reply_id: data.id,
+                replies_id: data.id,
               }
             : event;
         }),
@@ -79,7 +79,7 @@ const DNDEvent = (props) => {
 
   const handleUnreply = async () => {
     try {
-      await axiosRes.delete(`/replies/${reply_id}/`);
+      await axiosRes.delete(`/replies/${replies_id}/`);
       setEvents((prevEvents) => ({
         ...prevEvents,
         results: prevEvents.results.map((event) => {
@@ -87,7 +87,7 @@ const DNDEvent = (props) => {
             ? {
                 ...event,
                 replies_count: event.replies_count - 1,
-                reply_id: null,
+                replies_id: null,
               }
             : event;
         }),
@@ -158,18 +158,8 @@ const DNDEvent = (props) => {
                     className={`${styles.EventIcons} fa-regular fa-clock`}
                     aria-hidden="true"
                   ></i>{" "}
-                  End: {event_start}
-                </ListGroupItem>
-              )}
-              {location && (
-                <ListGroupItem className="d-flex justify-content-between align-items-center">
-                  <i
-                    className={`${styles.EventIcons} fa-solid fa-map-location-dot`}
-                    aria-hidden="true"
-                  ></i>{" "}
-                  {location}
-                </ListGroupItem>
-              )}
+                  End: {event_end}
+                </ListGroupItem>              )}
             </ListGroup>
           </Col>
           <Col>
@@ -195,6 +185,15 @@ const DNDEvent = (props) => {
                   {contact}
                 </ListGroupItem>
               )}
+              {location && (
+                <ListGroupItem className="d-flex justify-content-between align-items-center">
+                  <i
+                    className={`${styles.EventIcons} fa-solid fa-map-location-dot`}
+                    aria-hidden="true"
+                  ></i>{" "}
+                  {location}
+                </ListGroupItem>
+              )}
             </ListGroup>
           </Col>
         </Row>
@@ -208,7 +207,7 @@ const DNDEvent = (props) => {
                 className={`fa-solid fa-calendar-check ${styles.ReplyImpossible}`}
               />
             </OverlayTrigger>
-          ) : reply_id ? (
+          ) : replies_id ? (
             <span onClick={handleUnreply}>
               <i className={`fa-solid fa-calendar-check ${styles.Replied}`} />
             </span>

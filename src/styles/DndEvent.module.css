@@ -63,28 +63,27 @@ h5 {
   }
 
 .Responded {
-    color: #8d2b00;
+    color: #3b8d00;
 }
 
 .RemovedResp {
-    color: #08c564;
+    color: #da102e;
 }
 
 .Button {
-    font-family: 'Goudy Bookletter 1911', serif;
-    background-color: #8d2b00;
+    background-color: #e95516;
     border-radius: 100px;
-    border-color: #8d2b00;
+    border-color: #bf3e07;
 }
 
 .Button:hover {
     border-color: transparent;
     cursor: pointer;
-    background-color: #8d2b00;
+    background-color: #491c09;
 }
 
 .Button:hover:active {
-    background-color: #8d2b00 !important;
+    background-color: #034c17 !important;
 }
 
 .Button:active {
@@ -98,6 +97,5 @@ h5 {
 }
 
 .Modal {
-    font-family: 'Goudy Bookletter 1911', serif;
-    color: #030303
+    color: gb(3, 3, 3)rgb(3, 3, 3)rgb(30, 118, 180)
 }

@@ -1,102 +1,170 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# 20 Sided Queer
 
-Welcome,
+![Home Page View](/documentation/README_images/responsiveHomePage.png)
 
-This is the Code Institute student template for React apps on the Codeanywhere IDE. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.  
-DO NOT use this template if you are using the Gitpod IDE. Use the following command instead:  
-`npx create-react-app . --template git+https://github.com/Code-Institute-Org/cra-template-moments.git --use-npm`
+- You can find the link to the live site [here](/)
+- You can find the link to the Front-End GitHub Repo [here](https://github.com/AnnaDobrucki/q20-frontend-v2)
+- You can find the link to the Back-End API [here](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **31st August, 2023**
+## CONTENTS
 
-## Codeanywhere Reminders
+* [Introduction](#20SidedQueer)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* [Sections and Pages](#sections-and-pages)
+    *  [Header](#header)
+    *  [Sign Up](#sign-up)
+    *  [Login Page](#login-in)
+    *  [Profiles](#profiles)
+    *  [DnD Time!](#dnd-time)
+    *  [Edit Event](#edit-event)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* [User Experience](#user-experience)
+    *  [User Stories](#user-stories)
+* [Design](#desgin)
+    *  [Colour Palette](#colour-palette)
+    *  [Typography](#typeography)
+    *  [Wireframes](#wireframes)
+* [Future Ideas](#future-ideas)
+* [Technologies Used](#technologies-used)   
+    *  [Languages Used](#languages-Used)
+    *  [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
+* [Testing](#testing)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
----
 
-Happy coding!
+## Sections and Pages
 
-# Getting Started with Create React App
+### **Header** 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<details>
+<summary>Header Signed In ></summary>
 
-In the project directory, you can run:
+![Header](/)
+</details>
+<details>
+<summary>Header Signed Out ></summary>
 
-### `npm install`
+![Header-Out]()
+</details>
 
-Installs the required npm packages.
+### **Sign up**
 
-### `npm start`
+<details>
+<summary>Register ></summary>
 
-Runs the app in the development mode.\
-Open port 3000 to view it in the browser.
+![Register](/)
+</details>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### **Login In**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Here our pre registered users can sign into thre accounts:
+<details>
+<summary>Sign In ></summary>
 
-### `npm run build`
+![Login](/)
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Made A Post**
+*
+<details>
+<summary>Make a Post ></summary>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![made booking](/)
+</details>
 
-### `npm run eject`
+#### Delete Post
+*  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<details>
+<summary>Deletions ></summary>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![ Deleted ]()
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### **Edit Post**
+* As part of good CRUD functionality, our user can edit a post. Editing any and all original choices, with the original  values kept for the user to see and confirm.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## **User Experience**
 
-## Learn More
+* Content 
+ 
+### *Admin Users*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- To allow super users the ability to have easy access to the admin side. Allowing for a responsive website that allows them to shape there website, blog and bookings as they see fit.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### *User Stories*
 
-### Code Splitting
+Using the GitHub I used the agile methods and tools to allow myself to create and keep track of the User Stories I set out for myself in the beginning. 
+<details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<summary>User Stories Git Hub ></summary>
 
-### Analyzing the Bundle Size
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## **Design**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### *Colour Palette*
+  I used [My Colour Space](https://mycolor.space/?hex=%23EB7425&sub=1) to help find the best to match and compliment the scheme.
 
-### Advanced Configuration
+![Color Palette](/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### *Typeography*
 
-### Deployment
+### *Wireframes*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+[Back to top](#20SidedQueer)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Ideas
+
+After building the app, there were a couple of ideas that in the future I would like to implement. 
+* The ability for other users to be able to co-create events, adding one of more people to edit and delete events. In acse it was a company making an event, rather than sharing a log in.
+* Potentially linking up to some ecommerce and selling tickets for the "event".
+* Making it more into a DnD creation site like DnD Beyond see [here](https://www.dndbeyond.com/)
+
+## Technologies used
+
+### Languages Used
+- HTML5
+- CSS3
+- Javascript
+- Python
+- React
+- JSX
+
+### Frameworks, Libraries and Programs Used
+- [GitHub](https://github.com)
+- [Gitpod](https://gitpod.io/workspaces)
+- [Fontawesome](https://fontawesome.com/)
+- [Chrome Dev Tools](https://www.google.com/intl/en_ie/chrome/)
+- [Favicon.io](https://favicon.io/)
+- [Django](https://docs.djangoproject.com/) - Using a lot of there documentation through-out.
+- [Cloudinary](https://cloudinary.com/)
+- [Bootstrap](https://getbootstrap.com/docs/)
+- [Heroku](https://id.heroku.com/)
+
+
+## Testing
+
+  ### All notes related to testing are found [here](documentation/testing.md).
+
+[Back to top](#20SidedQueer)
+
+## Deployment
+
+
+## Credits
+
+Through-out this project I was inspired and helped by a number of sources, in order to make custom code:
+
+
+* I'd also like to credit thanks to all the tutors that helped guide me through-out at Code Institue.
+
+[Back to top](#totalplay)

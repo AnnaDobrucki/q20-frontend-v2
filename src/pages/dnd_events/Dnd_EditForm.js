@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect} from "react";
-import { Form, Button, Row, Col, Container, Image, Alert } from "react-bootstrap";
-import UploadImage from "../../assets/placeholder.jpg";
-import styles from "../../styles/DndEventsPage.module.css";
+import { Form, Button, Row, Col, Container, Alert } from "react-bootstrap";
+//import styles from "../../styles/DndEventsPage.module.css";
 import { useHistory, useParams } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
@@ -36,6 +35,7 @@ function DndEventEditForm() {
         const { game_name, game_master, event_end, event_location,
              event_start, date, game_description, image, contact, is_owner} = data;
 
+             console.log(data)
         is_owner ? setFormData({ game_name, game_master, event_end, event_location,
              event_start, date, game_description, image, contact }) : history.push("/");
       } catch (err) {
@@ -52,19 +52,15 @@ function DndEventEditForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleImageChange = (event) => {
-    if (event.target.files.length) {
-      setFormData({
-        ...formData,
-        image: URL.createObjectURL(event.target.files[0]),
-      });
-    } else {
-      setFormData({
-        ...formData,
-        image: formData.image,
-      });
-    }
-  };
+ 
+const handleImageChange = (event) => {
+  if (event.target.files.length) {
+    setFormData({
+      ...formData,
+      image: URL.createObjectURL(event.target.files[0]),
+    });
+  }
+};
 
   const handleSubmit = async (e) => {
     e.preventDefault();

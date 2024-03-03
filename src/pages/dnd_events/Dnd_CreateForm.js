@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
-import { Form, Button, Row, Col, Container, Image, Alert } from "react-bootstrap";
-import UploadImage from "../../assets/placeholder.jpg";
-import styles from "../../styles/DndEventsPage.module.css";
+import { Form, Button, Row, Col, Container, Alert } from "react-bootstrap";
+//import styles from "../../styles/DndEventsPage.module.css";
 import { useHistory } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
 import { axiosReq } from "../../api/axiosDefaults";
