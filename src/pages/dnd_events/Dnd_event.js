@@ -36,7 +36,7 @@ const DNDEvent = (props) => {
     game_master,
     contact,
     dnd_eventPage,
-    setEvents,
+    setDndEvents,
   } = props;
 
   console.log(props)
@@ -59,10 +59,10 @@ const DNDEvent = (props) => {
 
   const handleReply = async () => {
     try {
-      const { data } = await axiosRes.post("/replies/", { event: id });
-      setEvents((prevEvents) => ({
-        ...prevEvents,
-        results: prevEvents.results.map((event) => {
+      const { data } = await axiosRes.post("/replies/", { dnd_event: id });
+      setDndEvents((prevDndEvents) => ({
+        ...prevDndEvents,
+        results: prevDndEvents.results.map((event) => {
           return event.id === id
             ? {
                 ...event,
@@ -73,16 +73,16 @@ const DNDEvent = (props) => {
         }),
       }));
     } catch (err) {
-      // Handle error
+      console.log(err)
     }
   };
 
   const handleUnreply = async () => {
     try {
       await axiosRes.delete(`/replies/${replies_id}/`);
-      setEvents((prevEvents) => ({
-        ...prevEvents,
-        results: prevEvents.results.map((event) => {
+      setDndEvents((prevDndEvents) => ({
+        ...prevDndEvents,
+        results: prevDndEvents.results.map((event) => {
           return event.id === id
             ? {
                 ...event,

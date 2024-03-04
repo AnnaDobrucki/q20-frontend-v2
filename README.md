@@ -22,7 +22,7 @@
 
 * [User Experience](#user-experience)
     *  [User Stories](#user-stories)
-* [Design](#desgin)
+* [Design](#design)
     *  [Colour Palette](#colour-palette)
     *  [Typography](#typeography)
     *  [Wireframes](#wireframes)
