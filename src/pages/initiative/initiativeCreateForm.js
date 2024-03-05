@@ -28,7 +28,7 @@ function InitiativeForm() {
       <h2>Create Initiative</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
-          <label className={styles.label} htmlFor="name">Character Name:</label>
+          <label className={styles.label} htmlFor="name">Character:</label>
           <input
             className={styles.inputText}
             type="text"
@@ -39,7 +39,7 @@ function InitiativeForm() {
           />
         </div>
         <div className={styles.formGroup}>
-          <label className={styles.label} htmlFor="initiative">Initiative Value:</label>
+          <label className={styles.label} htmlFor="initiative">Initiative Roll!:</label>
           <input
             className={styles.inputNumber}
             type="number"

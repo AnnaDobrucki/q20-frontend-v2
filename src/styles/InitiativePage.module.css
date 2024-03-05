@@ -40,8 +40,8 @@
   
   .table th,
   .table td {
-    padding: 15px;
-    text-align: center; 
+    padding: 10px;
+    text-align: Center; 
     border-bottom: 1px solid #0f1d8b;
   }
   
@@ -55,3 +55,6 @@
     background-color: #b32929;
   }
   
+  .table td {
+    padding-right: 94px; 
+  }
