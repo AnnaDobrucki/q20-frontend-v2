@@ -54,6 +54,12 @@ const NavBar = () => {
         <i className="fa-solid fa-calendar-days"></i>DnD Time!
       </NavLink>
       <NavLink
+        to="/initiative"
+        className={styles.NavLinkOne}
+        activeClassName={styles.Active}>
+        <i className="fa-solid fa-dice-d20"></i>Initiative!
+      </NavLink>
+      <NavLink
         className={styles.NavLinkOne}
         activeClassName={styles.Active}
         to="/liked"
