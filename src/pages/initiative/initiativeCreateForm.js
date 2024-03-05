@@ -26,10 +26,11 @@ function InitiativeForm() {
   return (
     <div className={styles.container}>
       <h2>Create Initiative</h2>
-      <form onSubmit={handleSubmit}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
-          <label htmlFor="name">Character Name:</label>
+          <label className={styles.label} htmlFor="name">Character Name:</label>
           <input
+            className={styles.inputText}
             type="text"
             id="name"
             value={name}
@@ -38,8 +39,9 @@ function InitiativeForm() {
           />
         </div>
         <div className={styles.formGroup}>
-          <label htmlFor="initiative">Initiative Value:</label>
+          <label className={styles.label} htmlFor="initiative">Initiative Value:</label>
           <input
+            className={styles.inputNumber}
             type="number"
             id="initiative"
             value={initiative}
@@ -48,7 +50,7 @@ function InitiativeForm() {
           />
         </div>
         <div className={styles.buttonGroup}>
-          <button type="submit">Create Initiative</button>
+          <button className={styles.submitButton} type="submit">Create Initiative</button>
         </div>
       </form>
     </div>

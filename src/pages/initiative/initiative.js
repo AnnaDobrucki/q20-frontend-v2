@@ -30,35 +30,35 @@ const handleDelete = async () => {
 
   useEffect(() => {
     const fetchInitiatives = async () => {
-        try {
-            const { data } = await axiosReq.get(`/initiatives/?${filter}&search=${query}`);
-            setInitiatives(data.results);
-            setHasLoaded(true);
-        } catch (err) {
-            console.log(err);
-        }
+      try {
+        const { data } = await axiosReq.get(`/initiatives/?${filter}&search=${query}`);
+        setInitiatives(data.results);
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
     };
-
-}, [filter, query, initiatives]);
-
+  
     setHasLoaded(false);
     const timer = setTimeout(() => {
       fetchInitiatives();
     }, 1000);
-
+  
     return () => {
       clearTimeout(timer);
     };
-  }, [filter, query]);
+  }, [filter, query, initiatives]);
+
 
   return (
-    <div className={styles.container}>
+    <div className={styles.searchbarContainer}>
       <div className={styles.searchBar}>
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           type="text"
           placeholder="Search initiative"
+          className={styles.searchInput}
         />
       </div>
 
@@ -109,3 +109,4 @@ const handleDelete = async () => {
 }
 
 export default InitiativePage;
+
