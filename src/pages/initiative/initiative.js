@@ -51,9 +51,11 @@ function InitiativePage({ message, filter = "", id }) {
         setIsLoading(false);
       }
     };
-
-    fetchInitiatives();
-  }, [filter, query, page]);
+    //  Checks if hasLoaded is false or if filter, query, or page, have changed!
+    if (!hasLoaded || filter !== "" || query !== "" || page !== 1) {
+      fetchInitiatives();
+    }
+  }, [filter, query, page, hasLoaded]);
 
   return (
     <div className={styles.searchbarContainer}>
