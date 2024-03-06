@@ -3,6 +3,8 @@ import { Form, Button, Row, Col, Container, Alert } from "react-bootstrap";
 //import styles from "../../styles/DndEventsPage.module.css";
 import { useHistory, useParams } from "react-router-dom";
 import btnStyles from "../../styles/Button.module.css";
+import appStyles from "../../App.module.css";
+import Image from "react-bootstrap/Image";
 import { axiosReq } from "../../api/axiosDefaults";
 import { useRedirect } from "../../hooks/useRedirect";
 
@@ -20,6 +22,7 @@ function DndEventEditForm() {
     game_master : "",
     contact: "",
   });
+  const { image } = formData;
 
   const history = useHistory();
   const imageInputRef = useRef(null);
@@ -65,10 +68,26 @@ const handleImageChange = (event) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formDataToSend = new FormData();
-    for (const key in formData) {
+    for (const key of [
+      'game_name',
+      'game_description',
+      'event_location',
+      'date',
+      'event_start',
+      'event_end',
+      'game_master',
+      'contact',
+      ]) {
       formDataToSend.append(key, formData[key]);
-    }
-    try {
+      }
+
+      if (imageInputRef?.current?.files[0]) {
+      formDataToSend.append("image", imageInputRef.current.files[0]);
+      }
+for (let item of formDataToSend.entries())
+{
+console.log(item[0], item[1])
+}      try {
     await axiosReq.put(`/dnd_events/${id}`, formDataToSend);
       history.push(`/dndevents/${id}`);
     } catch (err) {
@@ -221,6 +240,9 @@ const handleImageChange = (event) => {
         <Row className="mb-3">
           <Col xs={10} md={6}>
             <Form.Group>
+            <figure>
+                <Image className={appStyles.Image} src={image} rounded />
+              </figure>
               <Form.Label>Iconic Image Here!</Form.Label>
               <Form.Control
                 type="file"
