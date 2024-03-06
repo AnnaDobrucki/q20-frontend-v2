@@ -11,7 +11,6 @@ import InfiniteScroll from "react-infinite-scroll-component";
 function InitiativePage({ message, filter = "", id }) {
   const [initiatives, setInitiatives] = useState([]);
   const [hasLoaded, setHasLoaded] = useState(false);
-  const [query] = useState("");
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -33,35 +32,45 @@ function InitiativePage({ message, filter = "", id }) {
     }
   };
 
+  const handleFetchInitiatives = (newInitiative) => {
+    console.log('handleFetchInitiatives invoked');
+    console.log(newInitiative);
+    setInitiatives((prevInitiatives) => [...prevInitiatives, newInitiative]);
+};
+
+
   useEffect(() => {
     const fetchInitiatives = async () => {
       setIsLoading(true); 
       try {
         const { data } = await axiosReq.get(
-          `/initiatives/?${filter}&search=${query}&page=${page}`
+          `/initiatives/?page=${page}`
         );
+        console.log('page', page);
+
         setInitiatives((prevInitiatives) => [
           ...prevInitiatives,
           ...data.results,
         ]);
         setHasLoaded(true);
+  
       } catch (err) {
         console.log(err);
       } finally {
         setIsLoading(false);
       }
     };
-    //  Needs to checks if hasLoaded is false or if filter, query, or page, have changed!
-    if (!hasLoaded || filter !== "" || query !== "" || page !== 1) {
+    //  Needs to checks if hasLoaded is false or if page, have changed!
+    if (!hasLoaded || page !== 1)
+    {
       fetchInitiatives();
     }
-  }, [filter, query, page, hasLoaded]);
+  }, [page, hasLoaded]);
+
 
   return (
     <div className={styles.searchbarContainer}>
-
-      <InitiativeForm setInitiatives={setInitiatives} />
-
+    <InitiativeForm onFetchInitiatives={handleFetchInitiatives} />
       <div className={styles.tableContainer}>
         <table className={styles.table}>
           <thead>
@@ -79,28 +88,28 @@ function InitiativePage({ message, filter = "", id }) {
           loader={null} 
         >
           <table className={styles.table}>
-            <tbody>
-              {initiatives.length > 0 ? (
-                initiatives.map((initiative) => (
-                  <tr key={initiative.id}>
-                    <td>{initiative.name}</td>
-                    <td>{initiative.initiative}</td>
-                    <td>
-                      <MoreDropdown
-                        handleEdit={() => handleEdit(initiative.id)}
-                        handleDelete={() => handleDelete(initiative.id)}
-                      />
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="3" className={styles.noResults}>
-                    <Asset src={NoResults} message={message} />
-                  </td>
-                </tr>
-              )}
-            </tbody>
+          <tbody>
+             {initiatives.length > 0 ? (
+                initiatives.sort((a, b) => b.initiative - a.initiative).map((initiative) => (
+                <tr key={initiative.id}>
+                  <td>{initiative.name}</td>
+                  <td>{initiative.initiative}</td>
+                  <td>
+            <MoreDropdown
+                handleEdit={() => handleEdit(initiative.id)}
+                handleDelete={() => handleDelete(initiative.id)}
+                />
+            </td>
+          </tr>
+          ))
+        ) : (
+            <tr>
+                <td colSpan="3" className={styles.noResults}>
+                <Asset src={NoResults} message={message} />
+            </td>
+            </tr>
+          )}
+    </tbody>
           </table>
         </InfiniteScroll>
         {isLoading && (

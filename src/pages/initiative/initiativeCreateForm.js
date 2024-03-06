@@ -1,23 +1,21 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/InitiativeForm.module.css";
 
-function InitiativeForm() {
+function InitiativeForm({onFetchInitiatives}) {
   const [name, setName] = useState("");
   const [initiative, setInitiative] = useState("");
-  const history = useHistory();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axiosReq.post("/initiatives/", {
+      const response = await axiosReq.post("/initiatives/", {
         name: name,
         initiative: initiative
       });
       setName("");
       setInitiative("");
-      history.push("/initiative");
+      onFetchInitiatives(response.data); 
     } catch (error) {
       console.error("Error creating initiative:", error);
     }
