@@ -19,6 +19,7 @@ import DndEventCreateForm from "./pages/dnd_events/Dnd_CreateForm";
 import DndEventPage from "./pages/dnd_events/Dnd_EventPage";
 import DndEventEditForm from "./pages/dnd_events/Dnd_EditForm";
 import InitiativePage from "./pages/initiative/initiative";
+import EditInitiativeForm from "./pages/initiative/initiativeEditForm";
 
 
 function App() {
@@ -83,6 +84,8 @@ function App() {
           />
           <Route exact path="/initiative" 
           render={() => <InitiativePage />} />
+           <Route exact path="/initiative/:id/edit"
+          render={() => <EditInitiativeForm/>}/>
             <Route
             exact
             path="/profiles/:id/edit/username"
