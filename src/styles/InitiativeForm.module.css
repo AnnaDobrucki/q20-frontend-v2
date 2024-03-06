@@ -45,3 +45,14 @@
 .submitButton:hover {
   background-color: #356291;
 }
+
+@media (max-width: 768px) {
+  .form {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .buttonGroup {
+    margin-top: 1rem; 
+  }
+}

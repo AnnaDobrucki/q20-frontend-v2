@@ -11,7 +11,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 function InitiativePage({ message, filter = "", id }) {
   const [initiatives, setInitiatives] = useState([]);
   const [hasLoaded, setHasLoaded] = useState(false);
-  const [query, setQuery] = useState("");
+  const [query] = useState("");
   const [page, setPage] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -51,7 +51,7 @@ function InitiativePage({ message, filter = "", id }) {
         setIsLoading(false);
       }
     };
-    //  Checks if hasLoaded is false or if filter, query, or page, have changed!
+    //  Needs to checks if hasLoaded is false or if filter, query, or page, have changed!
     if (!hasLoaded || filter !== "" || query !== "" || page !== 1) {
       fetchInitiatives();
     }
@@ -59,15 +59,6 @@ function InitiativePage({ message, filter = "", id }) {
 
   return (
     <div className={styles.searchbarContainer}>
-      <div className={styles.searchBar}>
-        <input
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          type="text"
-          placeholder="Search initiative"
-          className={styles.searchInput}
-        />
-      </div>
 
       <InitiativeForm setInitiatives={setInitiatives} />
 
