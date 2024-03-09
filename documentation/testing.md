@@ -172,6 +172,10 @@ For HTML validation I was instricted by tutors to do the following:
 
 [Edit Form Lighthouse Pic](/)
 
+### Initiative Page 
+
+[Initiative](/)
+
 ## Responsiveness Testing
 
 Thanks to bootstrap I didn't need to use many media quieres for the responsiveness was in built or easily managable in the styles.module.css files.  

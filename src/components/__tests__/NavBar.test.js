@@ -9,8 +9,6 @@ test("renders NavBar", () => {
       <NavBar />
     </Router>
   );
-
-  // screen.debug();
   const signInLink = screen.getByRole("link", { name: "Sign in" });
   expect(signInLink).toBeInTheDocument();
 });
