@@ -116,7 +116,7 @@ Here our pre registered users can sign into thre accounts:
 
 ## **User Experience**
 
-* Content 
+* 
  
 ### *Admin Users*
 
@@ -125,9 +125,15 @@ Here our pre registered users can sign into thre accounts:
 ### *User Stories*
 
 Using the GitHub I used the agile methods and tools to allow myself to create and keep track of the User Stories I set out for myself in the beginning. 
+Originally I had the idea of tasks forulating in my head when I made them, however after I'd done the posts, and followers, I remembered how hard it is to get a DND group in one place so perhaps a task/event app would be useful. 
+Which then led me to create the initative counter, after I had played a home game with friends and really wanted one. So I made one here!
+I like to think User Stories are a great sounding board for ideas and can help you keep on track with ideas you have, and can come back too. 
+However I believe I didn't use this resorce as much as I could have, and would like to use it more in future repos.
+
 <details>
 
-<summary>User Stories Git Hub ></summary>
+<summary>User Stories Git Hub</summary>
+![Git Stories](/documentation/README_images/UserStories.png)
 
 </details>
 
@@ -142,6 +148,10 @@ Using the GitHub I used the agile methods and tools to allow myself to create an
 ### *Typeography*
 
 ### *Wireframes*
+I created some basic wireframes using [Balsamique](https://balsamiq.com/), to help me build a sleek yet intuative layout for my custom pages.
+![Wireframe 1](/documentation/README_images/WireframeDNDEVENT.png)
+![Wireframe 2](/documentation/README_images/WireframeInitiative.png)
+
 
 
 [Back to top](#20-sided-queer)
