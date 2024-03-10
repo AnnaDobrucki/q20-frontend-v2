@@ -12,6 +12,9 @@
 You can find the link to the live site [here](https://q20-front-end-69f73c8caa66.herokuapp.com/)
 
 ## Error resolution and Debugging
+* I noticed a hiccup with the deletion process on the event page. While everything went smoothly when removing events from the main page, it hit a snag on the separate event ID page. Instead of taking users back to the expected "DnDTime" URL, it veered them towards the "dndevnt/dndevent/" page. After a bit (a lot) of digging, I sorted out the History Push function, making sure both the main event page and the specific event ID page smoothly navigate back to the DNDEvent Page.
+
+* I found an issue on the initiative page where the table data kept reloading, causing the data entries to repeat themselves multiple times. To resolve this, I implemented a setLoading state to manage isLoading. This managed to patch over the continuous reloading of data in a loop on my initiative counter. Allowing the table data to be fixed after it's reload.
 
 
 ## Validation
@@ -64,13 +67,10 @@ For HTML validation I was instricted by tutors to do the following:
 </details>
 
 ## CSS Validation
+* My CSS files successfully passed validation without any errors, allowing the styling of my web pages to be consistent and error-free. I used [W3C](https://jigsaw.w3.org/css-validator/validator) for validating.
 
-<details>
+![ CSS Validation](/documentation/README_images/CSSHomeValidation.png)
 
-<summary>CSS Validation ></summary>
-
-![css validation](/)
-</details>
 
 ## Linter PEP8 testing
 See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
@@ -111,6 +111,8 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 | On 'click' user is redireted to Sign In page| Sign in page is shown | Pass
 | On correct username and password user is logged in| Username and Profile are loaded| Pass
 | Once logged in user has access to DnDTime/ Make Posts/ Initiative and profile sections| Nav Bar extends with new icons| Pass
+| On 'click' to Sign Up| Redirect to sign up| Pass
+
 
 ### Sign Out Page 
 | Test Description (Sign Out Frontend)   | Expected Outcome | Actual Outcome |
@@ -132,6 +134,8 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 |  User MUST fill out most* input data fields  | Throws error messsages for any fields missing info* | Pass
 |  *Time errors do not throw errors | None shown, event made without passing info | Pass
 |  On 'Submit' AKA 'Create Adventure' | User is taken to and shown event page | Pass
+|  If owner/ creator, elipsis is shown | Elipsis with drop down icons for delete or edit | Pass
+|  If owner/ creator, delete button | cascades a delete functionality so event is deleted from API  | Pass
 
 ## Id Relevant Event Page
 | Test Description (Dnd Time Id Page Front End)   | Expected Outcome | Actual Outcome |
