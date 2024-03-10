@@ -2,7 +2,7 @@
 
 ![Home Page View](/documentation/README_images/responsiveHomePage.png)
 
-- You can find the link to the live site [here](/)
+- You can find the link to the live site [here](https://q20-front-end-69f73c8caa66.herokuapp.com/)
 - You can find the link to the Front-End GitHub Repo [here](https://github.com/AnnaDobrucki/q20-frontend-v2)
 - You can find the link to the Back-End API [here](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
@@ -17,7 +17,6 @@
 * [Sections and Pages](#sections-and-pages)
     *  [Header](#header)
     *  [Sign Up](#sign-up)
-    *  [Login Page](#login-in)
     *  [Make a Post](#make-a-post)
     *  [Profiles](#profiles)
     *  [DnD Time!](#dnd-time)
@@ -50,69 +49,95 @@ After laying the foundations of the site I made sure to re create a new Entity R
 
 
 
-
 ### **Header** 
-There are two versions of headers within the site, one for signed in users, and one for signed out. 
+There are two versions of headers within the site, one for signed in users, and one for signed out. This allows users to more functionality within the site.
 
 <details>
 <summary>Header Signed In ></summary>
 
-![Header](/)
+![Header](/documentation/README_images/SignInHeader.png)
 </details>
 <details>
 <summary>Header Signed Out ></summary>
 
-![Header-Out]()
+![Header-Out](/documentation/README_images/SignOutHeader.png)
 </details>
 
 ### **Sign up**
 
 <details>
-<summary>Register ></summary>
+<summary>Register </summary>
 
-![Register](/)
-</details>
-
-
-### **Login In**
-
-Here our pre registered users can sign into thre accounts:
-<details>
-<summary>Sign In ></summary>
-
-![Login](/)
+![Register](/documentation/README_images/SignUpPage.png)
 </details>
 
 
 ### **Make A Post**
-*
+* Users are asked to fillout Titles and Content with an image attachment.
 <details>
-<summary>Make a Post ></summary>
+<summary>Make a Post </summary>
 
-![](/)
+![Post Page](/documentation/README_images/MakeAPost.png)
 </details>
 
-#### Delete Post
-*  
+### Delete Post / Edit Post 
+*  As part of good CRUD functionality our users are able to both delete and edit posts, they are given a dropdown icon to select which option they prefer. In the edit section the page is prepopulated with the same values as originally placed. 
 
 <details>
-<summary>DnD Time! ></summary>
+<summary>Edit/Delete Post ></summary>
 
-![ Deleted ]()
+![ Deleted ](/documentation/README_images/Edit/DeletePost.png)
+![ Edit](/documentation/README_images/Edit/EDitPage.png)
+
 </details>
+
+### DnD Time!
+* Here users are able to see upcoming events based upon who recently made one, they can also click the replies button to show that they'd like to attend and hopefully drum up support around the event. They can also click to not attend the event. Within this page they are also invited to create there own should they fancy!
+* For users who might have forgotten they made a crackin event, there's also the "You can't attend" functionality, so they dont accidently double book themselves.
 <details>
+<summary>DND TIME! ></summary>
+
+![ DND Time Home  ](/documentation/README_images/DnDTimeHome.png)
+![ DND Time Attend  ](/documentation/README_images/Can'tAttendEvent.png)
+
+</details>
+
+#### Create Event 
+* Here our users are asked for information to create there own event! However there are certain fields that have promt messeages to make sure users give the bare minimum of info to eager beaver players.eg Image/Game Name/Location...
+<details>
+<summary>Create Event ></summary>
+
+![ Event ](/documentation/README_images/CreateEvent.png)
+![ EventPrompt  ](/documentation/README_images/CreatEventPromnt.png)
+
+</details>
+
+<details>
+
+#### Reply 
+* I wanted to give some more user functionaility and interactivity within the page, so created the ability to reply to built events. 
 <summary>Replies ></summary>
 
-![ Deleted ]()
+![ Replies ](/documentation/README_images/Replies.png)
 </details>
+
+### Profile Page
+* Our users are able to keep track of who they're following, and being followed by. At the same time they can choose to edit there password/ username/ or there own Bio!
+<details>
+<summary>Profile ></summary>
+
+![ Profile ](/documentation/README_images/ProfilePage.png)
+</details>
+
+### Initiative
+* As part of making two original forms for our users to be able to play with I wanted to make something quick and easy to use, especially something all DND Dungeon Masters long for. An initiative counter! A place to keep track of everyones characters and those pesky enemies, it can be a lot to navigate, so why not have it on this site, and ready to come back too later if you need it !
 <details>
 <summary>Initiative ></summary>
 
-![ Deleted ]()
+![ Initiative ](/documentation/README_images/InitiativePage.png)
 </details>
 
-### **Edit Post**
-* As part of good CRUD functionality, our user can edit a post. Editing any and all original choices, with the original  values kept for the user to see and confirm.
+
 
 ## **User Experience**
 
@@ -133,6 +158,7 @@ However I believe I didn't use this resorce as much as I could have, and would l
 <details>
 
 <summary>User Stories Git Hub</summary>
+
 ![Git Stories](/documentation/README_images/UserStories.png)
 
 </details>
