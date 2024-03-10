@@ -13,6 +13,7 @@
 
 * [Introduction](#20-sided-queer)
 
+* [Features](#features)
 
 * [Sections and Pages](#sections-and-pages)
     *  [Header](#header)
@@ -20,10 +21,8 @@
     *  [Make a Post](#make-a-post)
     *  [Profiles](#profiles)
     *  [DnD Time!](#dnd-time)
-    *  [Reply](#reply)
+    *  [Replies](#replies)
     *  [Initiative](#initiative)
-
-    
 
 * [User Experience](#user-experience)
     *  [User Stories](#user-stories)
@@ -39,6 +38,25 @@
 * [Deployment](#deployment)
 * [Credits](#credits)
 
+## Features 
+
+### *User Experience*
+
+### Event Creation and Management
+Easily create and manage D&D events with an intuitive event management system. Plan your adventures, set locations, dates, and invite othr users to come and play! With CRUD (Create, Read, Update, Delete) functionality, users have full control over events, and ensuring smooth organization and collaboration.
+
+### Collaborative Posts
+Users can share D&D experiences, tips, and stories through interactive posts.Signed up users  can engage with the community by sharing insights, asking questions, or recounting epic battles with the comments section.
+
+### Initiative Counter
+Keep track of initiative orders during your D&D sessions with our built-in initiative counter. Quickly add and update initiative values for players and non-player characters, ensuring smooth combat encounters and enhancing immersion during gameplay.
+
+### User-Friendly Interface
+Q20 features a user-friendly interface designed to provide a seamless browsing experience. Accessible navigation, intuitive icons, and responsive design ensure that users can easily explore and interact with the platform across devices.
+
+### *Admin Experience*
+
+In my API, I've included the option for admins to create superuser accounts, providing them with special privileges to manage the backend of the site. This gives admins the flexibility to moderate and oversee different aspects of the platform as needed. 
 
 ## Sections and Pages
 
@@ -50,20 +68,20 @@ After laying the foundations of the site I made sure to re create a new Entity R
 
 
 ### **Header** 
-There are two versions of headers within the site, one for signed in users, and one for signed out. This allows users to more functionality within the site.
+* There are two versions of headers within the site, one for signed in users, and one for signed out. This allows users to more functionality within the site.
 
 <details>
-<summary>Header Signed In ></summary>
+<summary>Header Signed In </summary>
 
 ![Header](/documentation/README_images/SignInHeader.png)
 </details>
 <details>
-<summary>Header Signed Out ></summary>
+<summary>Header Signed Out </summary>
 
 ![Header-Out](/documentation/README_images/SignOutHeader.png)
 </details>
 
-### **Sign up**
+#### **Sign up**
 
 <details>
 <summary>Register </summary>
@@ -84,7 +102,7 @@ There are two versions of headers within the site, one for signed in users, and 
 *  As part of good CRUD functionality our users are able to both delete and edit posts, they are given a dropdown icon to select which option they prefer. In the edit section the page is prepopulated with the same values as originally placed. 
 
 <details>
-<summary>Edit/Delete Post ></summary>
+<summary>Edit/Delete Post </summary>
 
 ![ Deleted ](/documentation/README_images/Edit/DeletePost.png)
 ![ Edit](/documentation/README_images/Edit/EDitPage.png)
@@ -95,7 +113,7 @@ There are two versions of headers within the site, one for signed in users, and 
 * Here users are able to see upcoming events based upon who recently made one, they can also click the replies button to show that they'd like to attend and hopefully drum up support around the event. They can also click to not attend the event. Within this page they are also invited to create there own should they fancy!
 * For users who might have forgotten they made a crackin event, there's also the "You can't attend" functionality, so they dont accidently double book themselves.
 <details>
-<summary>DND TIME! ></summary>
+<summary>DND TIME! </summary>
 
 ![ DND Time Home  ](/documentation/README_images/DnDTimeHome.png)
 ![ DND Time Attend  ](/documentation/README_images/Can'tAttendEvent.png)
@@ -105,26 +123,27 @@ There are two versions of headers within the site, one for signed in users, and 
 #### Create Event 
 * Here our users are asked for information to create there own event! However there are certain fields that have promt messeages to make sure users give the bare minimum of info to eager beaver players.eg Image/Game Name/Location...
 <details>
-<summary>Create Event ></summary>
+<summary>Create Event </summary>
 
 ![ Event ](/documentation/README_images/CreateEvent.png)
 ![ EventPrompt  ](/documentation/README_images/CreatEventPromnt.png)
 
 </details>
 
+#### Replies
+
 <details>
 
-#### Reply 
 * I wanted to give some more user functionaility and interactivity within the page, so created the ability to reply to built events. 
-<summary>Replies ></summary>
+<summary>Replies </summary>
 
 ![ Replies ](/documentation/README_images/Replies.png)
 </details>
 
-### Profile Page
+### Profiles
 * Our users are able to keep track of who they're following, and being followed by. At the same time they can choose to edit there password/ username/ or there own Bio!
 <details>
-<summary>Profile ></summary>
+<summary>Profile </summary>
 
 ![ Profile ](/documentation/README_images/ProfilePage.png)
 </details>
@@ -132,16 +151,11 @@ There are two versions of headers within the site, one for signed in users, and 
 ### Initiative
 * As part of making two original forms for our users to be able to play with I wanted to make something quick and easy to use, especially something all DND Dungeon Masters long for. An initiative counter! A place to keep track of everyones characters and those pesky enemies, it can be a lot to navigate, so why not have it on this site, and ready to come back too later if you need it !
 <details>
-<summary>Initiative ></summary>
+<summary>Initiative </summary>
 
 ![ Initiative ](/documentation/README_images/InitiativePage.png)
 </details>
-
-
-
-## **User Experience**
-
-* 
+ 
  
 ### *Admin Users*
 
@@ -149,11 +163,12 @@ There are two versions of headers within the site, one for signed in users, and 
 
 ### *User Stories*
 
-Using the GitHub I used the agile methods and tools to allow myself to create and keep track of the User Stories I set out for myself in the beginning. 
-Originally I had the idea of tasks forulating in my head when I made them, however after I'd done the posts, and followers, I remembered how hard it is to get a DND group in one place so perhaps a task/event app would be useful. 
-Which then led me to create the initative counter, after I had played a home game with friends and really wanted one. So I made one here!
-I like to think User Stories are a great sounding board for ideas and can help you keep on track with ideas you have, and can come back too. 
-However I believe I didn't use this resorce as much as I could have, and would like to use it more in future repos.
+* In my CI course, I've embraced agile methods and tools to keep my project on track. Initially, I had a clear vision for tasks, but as development progressed, new ideas bubbled up.
+
+* After tackling posts and followers, I realized the chaos of organizing DND sessions. Cue the task/event app! Inspired by my struggles to wrangle players, it became a game-changer. Then, fueled by a home game with friends, the initiative counter was born.
+
+* User Stories are a great sounding board for ideas and can help you keep on track with ideas you have, and can come back too. However I believe I didn't use this resorce intialy as much as I could have, and would like to intergrate it more in future repos.
+
 
 <details>
 
@@ -167,11 +182,14 @@ However I believe I didn't use this resorce as much as I could have, and would l
 ## **Design**
 
 ### *Colour Palette*
-  I used [My Colour Space](https://mycolor.space/?hex=%23EB7425&sub=1) to help find the best to match and compliment the scheme.
+  I used [My Colour Space](https://mycolor.space/?hex=%23EB7425&sub=1) to help find the best to match and compliment the scheme. 
 
-![Color Palette](/)
+![Color Palette](/documentation/README_images/colourpalette.png)
 
 ### *Typeography*
+
+In my project, I've employed the "Varela Round" and a sans-serif font for a clean and modern aesthetic. These fonts, provided by [Google Fonts](https://fonts.google.com/), giving a rounded yet straightforward appearance. Something that plays well for all generations and feels warm and inviting when reading it. 
+
 
 ### *Wireframes*
 I created some basic wireframes using [Balsamique](https://balsamiq.com/), to help me build a sleek yet intuative layout for my custom pages.
@@ -245,6 +263,13 @@ After building the app, there were a couple of ideas that in the future I would 
 
 Through-out this project I was inspired and helped by a number of sources, in order to make custom code:
 
+1) The CI Walkthrough for moments was a big influence and starting point for myself, I used and changed multiple factions of this code to help create my custom forms. One website that helped me with this was [Diff Checker](https://www.diffchecker.com/text-compare/) for understanding the breakdown of different pages.
+
+2) Using [VectorStock](https://www.vectorstock.com/royalty-free-vector/no-results-found-rgb-color-icon-vector-33390323) helped me find the error page icon I use through-out.
+
+3) [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) spesifically here to help me re learn a try/ catch/ final block (for the try/catch state in my iniative useEffect block). However through-out the project I regularly used this site for a quick reminder/ inspiration for fixing code.
+
+4) [medium](https://medium.com/@mariokandut/react-hooks-loading-indicator-and-error-handling-1a33f4e31db5), to assist with my isLoading setLoading state also in my iniative counter, as it continued to reload all my data in a loop before hand!
 
 * I'd also like to credit thanks to all the tutors that helped guide me through-out at Code Institue.
 
