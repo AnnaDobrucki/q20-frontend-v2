@@ -25,3 +25,5 @@ describe('DNDEvent component', () => {
     expect(screen.getByText('Join us for an epic adventure!')).toBeInTheDocument();
     expect(screen.getByText('Start: 18:00')).toBeInTheDocument();
   }) })
+
+

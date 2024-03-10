@@ -5,10 +5,11 @@
  * [Error resolution and Debugging](#error-resolution-and-debugging)
  * [Validation](#validation)
  * [Manual testing](#manual-testing)
+ * [Automatic testing](#automatic-testing)
  * [Lighthouse Testing](#lighthouse-testing)
  * [Responsiveness](#responsiveness-testing)
 
-You can find the link to the live site [here]()
+You can find the link to the live site [here](https://q20-front-end-69f73c8caa66.herokuapp.com/)
 
 ## Error resolution and Debugging
 
@@ -72,6 +73,7 @@ For HTML validation I was instricted by tutors to do the following:
 </details>
 
 ## Linter PEP8 testing
+See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
 ### Front End Validation 
 
@@ -108,14 +110,13 @@ For HTML validation I was instricted by tutors to do the following:
 | ----------- | ----------- | ----- |
 | On 'click' user is redireted to Sign In page| Sign in page is shown | Pass
 | On correct username and password user is logged in| Username and Profile are loaded| Pass
-| Once logged in user has access to DnDTime and Make Posts| Nav Bar extends with new icons| Pass
+| Once logged in user has access to DnDTime/ Make Posts/ Initiative and profile sections| Nav Bar extends with new icons| Pass
 
 ### Sign Out Page 
 | Test Description (Sign Out Frontend)   | Expected Outcome | Actual Outcome |
 | ----------- | ----------- | ----- |
 | On 'click' user is redireted to log out page | Log out page is shown | Pass
 | On 'click' user is logged out sucessfully | No longer shows icons/ profile for past user | Pass
-
 
 ### DnDTime 
 
@@ -145,6 +146,24 @@ For HTML validation I was instricted by tutors to do the following:
 | ----------- | ----------- | ----- |
 |  On 'Click' edit Event is shown | inputs are pre-populated with saved responses | Pass
 |  All input fields can be changed | reflects the edit of the event made | Pass
+
+## Initiative Page
+| Test Description (Initiative Front End)   | Expected Outcome | Actual Outcome |
+| ----------- | ----------- | ----- |
+|  On 'Click'  Initiative Page is shown | Counter input fields and any made iniatives show in tble below | Pass
+|  On 'Click'  Initiative Name field | Input Name / Character Name| Pass
+|  On 'Click'  Initiative Value field | Input Number only| Pass
+|  On 'Click'  Create Initiative button | Values are cleared and added to table below| Pass
+|  On 'Hover'  Vales in table are highlighted | Values are highlighted in red| Pass
+|  On 'Elipsis'  drop down Delete and Edit options appear| Both icons appear to relevant key| Pass
+|  On 'Bin'  drop down Delete | Removes key and value from table | Pass
+|  On 'Edit'  drop down edit | Prepopulates value fields and saves new values | Pass
+
+
+## Automatic testing
+* Within my API and Front End I managed to create a couple of automated tests.
+![Automated Test Front End](/documentation/README_images/automatedDNDEVENTTEST.png)
+
 
 ## Lighthouse Testing 
 
