@@ -169,7 +169,7 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
 ### Home Page 
 
-[Home Page Lighthouse Pic](/)
+[Home Page Lighthouse Pic](/documentation/README_images/lighthouse_testing/HomeLoggedInLighthouse.png)
 
 ### Sign Up Page
 
@@ -181,19 +181,31 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
 ### DnD Time Page 
 
-[DnD Time Page Lighthouse Pic](/)
+[DnD Time Page Lighthouse Pic](/documentation/README_images/lighthouse_testing/DnDTimeLighthouse.png)
 
 ### Dnd Event Form DnD Page 
 
-[Dnd Event Form Lighthouse Pic](/)
+[Dnd Event Form Lighthouse Pic](/documentation/README_images/lighthouse_testing/DNDEVENTCreateLighthouse.png)
 
 ### Edit Dnd Event Form DnD Page 
 
-[Edit Form Lighthouse Pic](/)
+[Edit Form Lighthouse Pic](/documentation/README_images/lighthouse_testing/DNDEditPageLighthouse.png)
 
 ### Initiative Page 
 
-[Initiative](/)
+[Initiative](/documentation/README_images/lighthouse_testing/InitiativeLighthouse.png)
+
+### Feed
+
+[Feed](/documentation/README_images/lighthouse_testing/FeedLighthouse.png)
+
+### Liked
+
+[Liked](/documentation/README_images/lighthouse_testing/likedLighthouse.png)
+
+### Profile
+
+[Profile](/documentation/README_images/lighthouse_testing/ProfileLIghthouse.png)
 
 ## Responsiveness Testing
 
@@ -212,6 +224,5 @@ Dev tools was my go to for understanding my sites responisveness. My site is res
 - Surface Pro 7
 - Surface Duo
 - Samsung Galaxy A51
-- Nest Hub Max
 
 [Back to README](/README.md)

@@ -51,7 +51,7 @@ const DNDEvent = (props) => {
   const handleDelete = async () => {
     try {
       await axiosRes.delete(`/dnd_events/${id}/`);
-      history.push("dndevents/");
+      history.push("/dndevents/");
     } catch (err) {
       // Handle error
     }
