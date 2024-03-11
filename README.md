@@ -40,7 +40,17 @@
 
 ## Features 
 
-### *User Experience*
+### Goals for My DND Project
+
+1. **Build a Cool Community**: I wanted to create a space where nerds who love TTRPGs, especially DND, could hang out, chat, and share their adventures.
+
+2. **Make Events/Tasks**: The plan was to let users organize game sessions or have tasks to prod events, meetups, and all sorts of TTRPG-related hangouts. 
+
+3. **Share Epic Tales**: Users could post stories and hilarious moments from their gaming sessions. (On somewhere that isn't facebook!).
+
+4. **Track Initiative Counter**: (Though this eveolved later) I figured every good Dungeon Master needs an initiative tracker, so I added one, to fufil the two forms needed in the project. And fufil the need in myself for a tracker...
+
+### *User Experience Accomplished*
 
 ### Event Creation and Management
 Easily create and manage D&D events with an intuitive event management system. Plan your adventures, set locations, dates, and invite othr users to come and play! With CRUD (Create, Read, Update, Delete) functionality, users have full control over events, and ensuring smooth organization and collaboration.
@@ -176,6 +186,13 @@ After laying the foundations of the site I made sure to re create a new Entity R
 
 ![Git Stories](/documentation/README_images/UserStories.png)
 
+* Closing the issues before final deployment after last checks.
+
+![Git Closing](/documentation/README_images/ClosingIssues.png)
+
+* I created a milestone that the eslint would make sure to have no erros going through my code.
+![Git Milestones](/documentation/README_images/MilestoneClosed.png)
+
 </details>
 
 
@@ -227,15 +244,15 @@ After building the app, there were a couple of ideas that in the future I would 
 - JSX
 
 ### Frameworks, Libraries and Programs Used
-- [GitHub](https://github.com)
-- [Gitpod](https://gitpod.io/workspaces)
-- [Fontawesome](https://fontawesome.com/)
-- [Chrome Dev Tools](https://www.google.com/intl/en_ie/chrome/)
-- [Favicon.io](https://favicon.io/)
-- [Django](https://docs.djangoproject.com/) - Using a lot of there documentation through-out.
-- [Cloudinary](https://cloudinary.com/)
-- [Bootstrap](https://getbootstrap.com/docs/)
-- [Heroku](https://id.heroku.com/)
+- [GitHub](https://github.com) - For version control using Git. 
+- [Gitpod](https://gitpod.io/workspaces) - For my workspace setting up my development environment.
+- [Fontawesome](https://fontawesome.com/) For embedding icons within my project.
+- [Chrome Dev Tools](https://www.google.com/intl/en_ie/chrome/) - Allowing me to debug and tinker with my site.
+- [Favicon.io](https://favicon.io/) - Create browser icon.
+- [Django](https://docs.djangoproject.com/) - Using a lot of there documentation through-out. - Used in the backend allowing for databse management.
+- [Cloudinary](https://cloudinary.com/) - My image management cloud platform.
+- [Bootstrap](https://getbootstrap.com/docs/) - Allowing for easy to use templates (creating forms predominatly).
+- [Heroku](https://id.heroku.com/) - The place where I deploy and host my site.
 
 
 ## Testing
