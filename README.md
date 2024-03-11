@@ -75,8 +75,6 @@ After laying the foundations of the site I made sure to re create a new Entity R
 
 ![Entity Diagram](/documentation/README_images/Entity%20Relationship%20Diagram.png)
 
-
-
 ### **Header** 
 * There are two versions of headers within the site, one for signed in users, and one for signed out. This allows users to more functionality within the site.
 

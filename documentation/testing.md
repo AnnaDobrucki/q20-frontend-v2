@@ -20,52 +20,6 @@ You can find the link to the live site [here](https://q20-front-end-69f73c8caa66
 ## Validation
 Below are all verifications of code validations. 
 
-## HTML Validation
-
-For HTML validation I was instricted by tutors to do the following:
-1) Open page in browser.
-2) View page sorce code.
-3) Copy and paste into relevant Validator.
-
-### Home Page Validation
-
-<details>
-
-<summary>Home Page Validation ></summary>
-
-![ Home Page]()
-</details>
-
-### Sign In Validation 
-
-<details>
-
-<summary>Sign In Validation ></summary>
-
-![ Sign In](/)
-</details>
-
-### Register
-
-
-### Posts
-
-<details>
-
-<summary>Posts ></summary>
-
-![posts ](/)
-</details>
-
-### Post Edit Page 
-
-<details>
-
-<summary> Post Edit Page ></summary>
-
-![Posts admin]()
-</details>
-
 ## CSS Validation
 * My CSS files successfully passed validation without any errors, allowing the styling of my web pages to be consistent and error-free. I used [W3C](https://jigsaw.w3.org/css-validator/validator) for validating.
 

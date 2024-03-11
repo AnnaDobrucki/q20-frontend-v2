@@ -58,3 +58,10 @@
   .table td {
     padding-right: 94px; 
   }
+
+  /* Media Query for smaller screens */
+@media only screen and (max-width: 600px) {
+  .table td {
+      padding-right: 20px; 
+  }
+}
