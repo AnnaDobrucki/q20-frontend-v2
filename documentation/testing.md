@@ -35,6 +35,10 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
 ![ Eslint Validation](/documentation/README_images/EslintTest.png)
 
+* I also have no "Problems" to resolve in the terminal.
+
+![ Problem Validation](/documentation/README_images/problemsTerminal.png)
+
 
 ### Front End Validation 
 
@@ -138,11 +142,11 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
 ### Sign Up Page
 
-[Sign Up Lighthouse Pic](/)
+[Sign Up Lighthouse Pic](/documentation/README_images/lighthouse_testing/SignUpLighthouse.png)
 
 ### Sign In Page 
 
-[Sign Page Lighthouse Pic](/)
+[Sign Page Lighthouse Pic](/documentation/README_images/lighthouse_testing/SignInLoightouse.png)
 
 ### DnD Time Page 
 

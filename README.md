@@ -3,6 +3,7 @@
 ![Home Page View](/documentation/README_images/responsiveHomePage.png)
 
 - You can find the link to the live site [here](https://q20-front-end-69f73c8caa66.herokuapp.com/)
+- You can find the link to the live API site [here](https://pp5-q20-adf89388b6ef.herokuapp.com/)
 - You can find the link to the Front-End GitHub Repo [here](https://github.com/AnnaDobrucki/q20-frontend-v2)
 - You can find the link to the Back-End API [here](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
@@ -183,15 +184,17 @@ After laying the foundations of the site I made sure to re create a new Entity R
 <summary>User Stories Git Hub</summary>
 
 ![Git Stories](/documentation/README_images/UserStories.png)
+</details>
+
 
 * Closing the issues before final deployment after last checks.
 
 ![Git Closing](/documentation/README_images/ClosingIssues.png)
 
 * I created a milestone that the eslint would make sure to have no erros going through my code.
+
 ![Git Milestones](/documentation/README_images/MilestoneClosed.png)
 
-</details>
 
 
 ## **Design**
