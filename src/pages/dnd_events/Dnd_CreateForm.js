@@ -23,11 +23,13 @@ function DndEventCreateForm() {
   const history = useHistory();
   const imageInputRef = useRef(null);
 
+  // Manage form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // Manage Image "onClick" selection
   const handleImageChange = (e) => {
     setFormData({ ...formData, image: e.target.files[0] });
   };
@@ -38,6 +40,7 @@ function DndEventCreateForm() {
     for (const key in formData) {
       formDataToSend.append(key, formData[key]);
     }
+    // POST-ing to create new DnD event/ instance
     try {
       const { data } = await axiosReq.post("/dnd_events/", formDataToSend);
       history.push(`/dndevents/${data.id}`);

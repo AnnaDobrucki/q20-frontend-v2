@@ -28,6 +28,7 @@ function DndEventEditForm() {
   const imageInputRef = useRef(null);
   const {id} = useParams();
 
+// Get-ing event data for pre populating and changing input fields
   useEffect(() => {
     const handleMount = async () => {
       try {
@@ -62,6 +63,7 @@ const handleImageChange = (event) => {
   }
 };
 
+  // Managing 'new' input via 'put'.
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formDataToSend = new FormData();

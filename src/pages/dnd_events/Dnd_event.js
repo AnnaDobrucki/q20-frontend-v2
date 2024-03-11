@@ -16,7 +16,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
 
-
+// Component to show a Dungeons & Dragons event list
 const DNDEvent = (props) => {
   const {
     id,
@@ -56,6 +56,7 @@ const DNDEvent = (props) => {
         }
   };
 
+  // Function for replying to the event
   const handleReply = async () => {
     try {
       const { data } = await axiosRes.post("/replies/", { dnd_event: id });
@@ -92,8 +93,8 @@ const DNDEvent = (props) => {
         }),
       }));
     } catch (err) {
-      // Handle error
-    }
+      console.log(err)
+        }
   };
 
   return (

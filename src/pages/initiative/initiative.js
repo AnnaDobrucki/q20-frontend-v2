@@ -15,11 +15,12 @@ function InitiativePage({ message, filter = "", id }) {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
+  // Function to navigate to the edit page of an initiative
   const handleEdit = (id) => {
     history.push(`/initiative/${id}/edit`);
   };
 
-
+  // Function to delete an initiative
   const handleDelete = async (id) => {
     try {
       await axiosRes.delete(`/initiatives/${id}`);
@@ -31,7 +32,8 @@ function InitiativePage({ message, filter = "", id }) {
       console.error("Error deleting initiative:", error);
     }
   };
-
+  
+  // Function to handle fetching initiatives and updating state
   const handleFetchInitiatives = (newInitiative) => {
     console.log('handleFetchInitiatives invoked');
     console.log(newInitiative);

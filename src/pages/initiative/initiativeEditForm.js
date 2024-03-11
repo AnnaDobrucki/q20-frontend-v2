@@ -12,6 +12,7 @@ function InitiativeEditForm() {
 
   useEffect(() => {
     const fetchInitiative = async () => {
+    // Fetch initiative data from the API
       try {
         const response = await axiosReq.get(`/initiatives/${id}/`);
         const { data } = response;
@@ -28,6 +29,8 @@ function InitiativeEditForm() {
     fetchInitiative();
   }, [id]);
   
+
+  // Handle form submission to update the initiative
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

@@ -20,6 +20,7 @@ function DndEventsPage({ message }) {
   const [query, setQuery] = useState("");
   const currentUser = useCurrentUser();
 
+  // Fetches the query entered in search bar and displays results
   useEffect(() => {
     const fetchDndEvents = async () => {
       try {

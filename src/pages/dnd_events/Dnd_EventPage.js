@@ -13,6 +13,7 @@ function DndEventPage() {
   const [dndEvent, setDNDEvent] = useState({});
   const currentUser = useCurrentUser();
 
+  // Request info on DnD events via API
   useEffect(() => {
     const fetchDNDEvent = async () => {
       try {

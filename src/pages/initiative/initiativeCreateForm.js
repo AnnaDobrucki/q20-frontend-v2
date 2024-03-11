@@ -6,6 +6,7 @@ function InitiativeForm({onFetchInitiatives}) {
   const [name, setName] = useState("");
   const [initiative, setInitiative] = useState("");
 
+  // Function to handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {

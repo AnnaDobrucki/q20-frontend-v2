@@ -186,8 +186,8 @@ Dev tools was my go to for understanding my sites responisveness. My site is res
 - Samsung Galaxy S20 Ultra
 - iPad Air
 - iPad Mini
-- Surface Pro 7
 - Surface Duo
 - Samsung Galaxy A51
+- Nest Max
 
 [Back to README](/README.md)
