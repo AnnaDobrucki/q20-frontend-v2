@@ -15,7 +15,7 @@ function InitiativePage({ message, filter = "", id }) {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-  const handleEdit = () => {
+  const handleEdit = (id) => {
     history.push(`/initiative/${id}/edit`);
   };
 
@@ -47,6 +47,7 @@ function InitiativePage({ message, filter = "", id }) {
           `/initiatives/?page=${page}`
         );
         console.log('page', page);
+        console.table(data.results)
 
         setInitiatives((prevInitiatives) => [
           ...prevInitiatives,

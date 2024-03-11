@@ -33,13 +33,10 @@ function DndEventEditForm() {
       try {
         const { data } = await axiosReq.get(`/dnd_events/${id}/`);
 
-        console.log(data)
-
         const { game_name, game_master, event_end, event_location,
              event_start, date, game_description, image, contact, is_owner} = data;
 
-             console.log(data)
-        is_owner ? setFormData({ game_name, game_master, event_end, event_location,
+             is_owner ? setFormData({ game_name, game_master, event_end, event_location,
              event_start, date, game_description, image, contact }) : history.push("/");
       } catch (err) {
         console.log(err);
@@ -84,14 +81,10 @@ const handleImageChange = (event) => {
       if (imageInputRef?.current?.files[0]) {
       formDataToSend.append("image", imageInputRef.current.files[0]);
       }
-for (let item of formDataToSend.entries())
-{
-console.log(item[0], item[1])
-}      try {
-    await axiosReq.put(`/dnd_events/${id}`, formDataToSend);
+     try {
+    await axiosReq.put(`/dnd_events/${id}/`, formDataToSend);
       history.push(`/dndevents/${id}`);
     } catch (err) {
-      console.log(err.response)
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

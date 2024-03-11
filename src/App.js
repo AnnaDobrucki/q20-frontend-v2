@@ -84,7 +84,9 @@ function App() {
           />
           <Route exact path="/initiative" 
           render={() => <InitiativePage />} />
-           <Route exact path="/initiative/:id/edit"
+           <Route 
+           exact 
+           path="/initiative/:id/edit"
           render={() => <EditInitiativeForm/>}/>
             <Route
             exact

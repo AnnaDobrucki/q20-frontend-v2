@@ -39,7 +39,6 @@ const DNDEvent = (props) => {
     setDndEvents,
   } = props;
 
-  console.log(props)
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
@@ -53,8 +52,8 @@ const DNDEvent = (props) => {
       await axiosRes.delete(`/dnd_events/${id}/`);
       history.push("/dndevents/");
     } catch (err) {
-      // Handle error
-    }
+      console.log(err)
+        }
   };
 
   const handleReply = async () => {

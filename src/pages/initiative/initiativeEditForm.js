@@ -1,33 +1,52 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import { axiosReq } from "../../api/axiosDefaults";
 import styles from "../../styles/InitiativeForm.module.css";
 
-function EditInitiativeForm({ id, initialName = "", initialInitiative = "" }) {
-  const [name, setName] = useState(initialName);
-  const [initiative, setInitiative] = useState(initialInitiative);
+function InitiativeEditForm() {
+  const { id } = useParams();
   const history = useHistory();
+  
+  const [name, setName] = useState("");
+  const [initiative, setInitiative] = useState("");
 
+  useEffect(() => {
+    const fetchInitiative = async () => {
+      try {
+        const response = await axiosReq.get(`/initiatives/${id}/`);
+        const { data } = response;
+        if (data && data.name && data.initiative) {
+          setName(data.name);
+          setInitiative(data.initiative);
+        } else {
+          console.error("Invalid initiative data:", data);
+        }
+      } catch (error) {
+        console.error("Error fetching initiative:", error);
+      }
+    };
+    fetchInitiative();
+  }, [id]);
+  
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      if (id) {
-        await axiosReq.put(`/initiatives/${id}/`, {
-          name: name,
-          initiative: initiative
-        });
-      } 
+      await axiosReq.put(`/initiatives/${id}/`, {
+        name: name,
+        initiative: initiative
+      });
       setName("");
       setInitiative("");
       history.push("/initiative");
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Error updating initiative:", error);
     }
   };
+  
 
   return (
     <div className={styles.container}>
-      <h2>{id ? "Edit Initiative" : "Create Initiative"}</h2>
+      <h2>Edit Initiative</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <label className={styles.label} htmlFor="name">Character:</label>
@@ -41,7 +60,7 @@ function EditInitiativeForm({ id, initialName = "", initialInitiative = "" }) {
           />
         </div>
         <div className={styles.formGroup}>
-          <label className={styles.label} htmlFor="initiative">Initiative Roll:</label>
+          <label className={styles.label} htmlFor="initiative">Initiative Roll!:</label>
           <input
             className={styles.inputNumber}
             type="number"
@@ -52,13 +71,11 @@ function EditInitiativeForm({ id, initialName = "", initialInitiative = "" }) {
           />
         </div>
         <div className={styles.buttonGroup}>
-          <button className={styles.submitButton} type="submit">
-            {id ? "Update Initiative" : "Create Initiative"}
-          </button>
+          <button className={styles.submitButton} type="submit">Save Changes</button>
         </div>
       </form>
     </div>
   );
 }
 
-export default EditInitiativeForm;
+export default InitiativeEditForm;

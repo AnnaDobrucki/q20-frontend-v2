@@ -75,6 +75,13 @@ For HTML validation I was instricted by tutors to do the following:
 ## Linter PEP8 testing
 See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 
+## Eslint testing
+
+* After an error with installing a different Eslint package and rectifying it, I found out a good way to check for errors or warnings is to use code - npx eslint ./src. I found there were a couple of warning that I've since rectified. 
+
+![ Eslint Validation](/documentation/README_images/EslintTest.png)
+
+
 ### Front End Validation 
 
 ## Manual Testing 
