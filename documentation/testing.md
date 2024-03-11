@@ -16,6 +16,7 @@ You can find the link to the live site [here](https://q20-front-end-69f73c8caa66
 
 * I found an issue on the initiative page where the table data kept reloading, causing the data entries to repeat themselves multiple times. To resolve this, I implemented a setLoading state to manage isLoading. This managed to patch over the continuous reloading of data in a loop on my initiative counter. Allowing the table data to be fixed after it's reload.
 
+* In my create posts, I encountered an error that if a file was too large *and* potentially corrupted Cloudinary throws an error that I unfortunatley didn't have time to debug / fix.
 
 ## Validation
 Below are all verifications of code validations. 

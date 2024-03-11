@@ -92,6 +92,7 @@ After laying the foundations of the site I made sure to re create a new Entity R
 
 #### **Sign up**
 
+*  Our users can create their own account within seconds!
 <details>
 <summary>Register </summary>
 
@@ -163,6 +164,14 @@ After laying the foundations of the site I made sure to re create a new Entity R
 <summary>Initiative </summary>
 
 ![ Initiative ](/documentation/README_images/InitiativePage.png)
+</details>
+
+### Liked
+* Liked posts are stored here so users don't have to keep on search back through dozens (hopefully) of posts to find that one they love most!
+<details>
+<summary>Liked </summary>
+
+![ Liked page  ](/documentation/README_images/LikedPage.png)
 </details>
  
  
