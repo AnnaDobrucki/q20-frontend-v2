@@ -24,8 +24,9 @@
     *  [DnD Time!](#dnd-time)
     *  [Replies](#replies)
     *  [Initiative](#initiative)
-
-* [User Experience](#user-experience)
+    
+* [Components](#components)
+* [User Experience](#user-experience-accomplished)
     *  [User Stories](#user-stories)
 * [Design](#design)
     *  [Colour Palette](#colour-palette)
@@ -182,7 +183,23 @@ After laying the foundations of the site I made sure to re create a new Entity R
 ![ Not Found page  ](/documentation/README_images/NotFound.png)
 </details>
  
- 
+## Components
+
+Within the Q20 project, I made severlal components:
+
+1. **Asset Component**: Renders loading spinners and imagesbased on specific props. 
+
+2. **Avatar Component**: Allows users to create and display there own unique Profile images
+
+3. **MoreDropDown Component**: A dropdown menu that displays the edit/ delete icons that are universally known, and redirects to pages or deletes said element.
+
+4. **NavBar Component**: Displays all the relevant icons and text for links that our logged our or logged in users can use.
+
+5. **NotFound Component**: Tracks and delivers error messages to users who navigate to non-existing URLs. 
+
+6. **Add Event**. In addition to these components, the Add Event Button Component component provides a reusable button for adding events to a page.
+
+
 ### *Admin Users*
 
 - To allow super users the ability to have easy access to the admin side. Allowing for a responsive website that allows them to shape there website, blog and bookings as they see fit.

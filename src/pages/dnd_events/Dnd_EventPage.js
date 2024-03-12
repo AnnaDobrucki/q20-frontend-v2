@@ -4,15 +4,14 @@ import { useParams } from "react-router";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { axiosReq } from "../../api/axiosDefaults";
 import PopularProfiles from "../profiles/PopularProfiles";
-import DNDEvent from "./Dnd_event";
 import styles from "../../styles/DndEventsPage.module.css";
 import AddEventButton from "../../components/AddEventButton";
+import DNDEvent from "../dnd_events/Dnd_event";
 
 function DndEventPage() {
   const { id } = useParams();
-  const [dndEvent, setDNDEvent] = useState({results: [] });
+  const [dndEvent, setDNDEvents] = useState({results: [] });
   const currentUser = useCurrentUser();
-  const [replies, setReplies] = useState({ results: [] });
 
 
 
@@ -20,13 +19,11 @@ function DndEventPage() {
   useEffect(() => {
     const fetchDNDEvent = async () => {
       try {
-        const [{ data: dndEvent }, { data: replies }] = await Promise.all([
+        const [{ data: dndEvent }] = await Promise.all([
           axiosReq.get(`/dnd_events/${id}`),
-          axiosReq.get(`/replies/?dnd_events=${id}`),
         ]);
       
-        setDNDEvent(dndEvent);
-        setReplies(replies);
+        setDNDEvents({results: [dndEvent]});
       } catch (err) {
         console.error("Error fetching DND event and replies:", err);
       }
@@ -34,6 +31,7 @@ function DndEventPage() {
 
     fetchDNDEvent();
   },  [id]);
+
 
   return (
     <Container className={`${styles.Event} pt-3`}>
@@ -43,7 +41,11 @@ function DndEventPage() {
           {currentUser && (
             <AddEventButton url="/dndevents/create" text="Create Event" mobile />
           )}
-          {dndEvent && <DNDEvent {...dndEvent} dnd_eventPage/>}
+          <DNDEvent
+        {...dndEvent.results[0]}
+        setDndEvents={setDNDEvents} 
+        dnd_eventPage
+      />
         </Col>
         <Col>
           {currentUser && (
