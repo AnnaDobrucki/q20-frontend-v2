@@ -176,10 +176,10 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 |  On 'Click' to Add post Nav linked to Logged in User Profile | Redirects to user Add Page page| Pass
 |  Users have options to add to input post fields | All fields are editable | Pass
 |  Users have options to add to pictures post fields | Pulls up relevant picture search form device | Pass
-|  Users have  | Pulls up relevant picture search form device | Pass
-
-
-
+|  If user must fill in Title and upload an image  | Warning messages appare if not correctly filled fields | Pass
+|  On 'Click' for  create use is redircted to there post | Takes them to relevant url with there event and comments section | Pass
+| ----------- | ----------- | ----- |
+|  Comments can be added to relevant post | Redirects to user Add Page page| Pass
 
 
 ## Automatic testing
