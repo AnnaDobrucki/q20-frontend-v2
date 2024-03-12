@@ -179,8 +179,25 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 |  If user must fill in Title and upload an image  | Warning messages appare if not correctly filled fields | Pass
 |  On 'Click' for  create use is redircted to there post | Takes them to relevant url with there event and comments section | Pass
 | ----------- | ----------- | ----- |
-|  Comments can be added to relevant post | Redirects to user Add Page page| Pass
+|  Comments can be added to relevant post | Comment shown below post| Pass
+|  Comments can be edited to relevant post | Comment refreshed and edit version shown| Pass
+|  Comments can be deleted to relevant post | Comment refreshed and deleted comment removed | Pass
+| ----------- | ----------- | ----- |
+|  On 'Click' ellipsis shown for dropdown edit and deletion| icons shown| Pass
+|  On 'Click' edit page | redircts to edit page| Pass
+|  On 'Click' fields are editable  | new values are taken within input fields| Pass
+|  On 'Save' edit page | redircts to post page with edit shown| Pass
+| ----------- | ----------- | ----- |
+|  On 'Click' delete page | removes post page| Pass
+|  On 'Click' delete page | redircts to home| Pass
 
+
+## Feed Page
+| Test Description (Feed Front Edit End)   | Expected Outcome | Actual Outcome |
+| ----------- | ----------- | ----- |
+|  On 'Click' to feed Nav linked to Logged in User Profile | Redirects to user Feed page| Pass
+|  Users pre 'followed users' posts are scoured and listed is Loaded | Posts are loaded | Pass
+|  Search Bar functionaility redefines list based on key word search | Redefined list is shown | Pass
 
 ## Automatic testing
 * Within my API and Front End I managed to create a couple of automated tests.
