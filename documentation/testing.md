@@ -57,11 +57,13 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 | On 'click' to any post | Should redirect to full post on creators page | Pass
 | On 'click' to Sign Up | Should redirect to Registration Page| Pass
 | On 'click' to Sign In | Should redirect to Sign In| Pass
+| On 'click' to Profile ID| Should redirect spesific profile| Pass
 | Within post Clicked| See all comments made| Pass
 | Within post Clicked| See all likes given| Pass
 | If logged out - On 'click' to like any post | Message "to like a post log in" | Pass
 | ----------- | ----------- | ----- |
 | Test Description (Home Page - Logged In)   | Expected Outcome | Actual Outcome |
+| Click to add like | Like added| Pass
 | Click to remove like | Like removed| Pass
 | Click to edit post |  pre populated fields| Pass
 | Logged in user can type/ reply to comments | See comments box| Pass
@@ -95,6 +97,11 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 |  On 'Click' loads up current events made  | List vertical view of events by most recent created at top | Pass
 |  User on 'Click' to Create Event | Redirected to event making page | Pass
 |  Can "follow"/"unfollow" profiles at anytime  | Widget changes colour and text| Pass
+|  Can "Reply/Unreply" to DnD Events at anytime  | Widget changes colour and counter increase/decrease| Pass
+|  User on 'Click' of Event Title redirected to relevant event page | Redirected to event page | Pass
+|  User can 'scroll' infinatley through all posts | Scroll bar at the side/ no pagination| Pass
+|  User can't attend there own event | Warning message 'Can't attend' shown/ unable to change counter| Pass
+|  User can search relevant Title Event/Profile Name and see corresponding event| A refined list of relevant events is shown| Pass
 
 ### Create Event Page
 | Test Description (Dnd Time Create Event Front End)   | Expected Outcome | Actual Outcome |
@@ -118,6 +125,9 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 | ----------- | ----------- | ----- |
 |  On 'Click' edit Event is shown | inputs are pre-populated with saved responses | Pass
 |  All input fields can be changed | reflects the edit of the event made | Pass
+|  On 'Save Adventure' user redirected to Events Page | User is redircted | Pass
+|  Once redircted Uer can see relevant changes  | Changes have been saved| Pass
+
 
 ## Initiative Page
 | Test Description (Initiative Front End)   | Expected Outcome | Actual Outcome |
@@ -129,7 +139,47 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 |  On 'Hover'  Vales in table are highlighted | Values are highlighted in red| Pass
 |  On 'Elipsis'  drop down Delete and Edit options appear| Both icons appear to relevant key| Pass
 |  On 'Bin'  drop down Delete | Removes key and value from table | Pass
-|  On 'Edit'  drop down edit | Prepopulates value fields and saves new values | Pass
+
+
+## Initiative Edit Page
+| Test Description (Initiative Front Edit End)   | Expected Outcome | Actual Outcome |
+| ----------- | ----------- | ----- |
+|  On 'Edit'  drop down edit | Prepopulates value fields| Pass
+|  On 'Edit'  page Users can change values| Input fields allow removal and addition | Pass
+|  On 'Save Changes'| User is redirected to iniatives page | Pass
+|  Table reflects changes with no new additions| Character and Inative have been saved and re added to table | Pass
+
+## Profiles Page
+| Test Description (Profiles Front Edit End)   | Expected Outcome | Actual Outcome |
+| ----------- | ----------- | ----- |
+|  On 'Click' to Profile Nav linked to Logged in User Profile | Redirects to user profile page| Pass
+|  Users Profile Pic/ Followers/Followed-By/Posts Counter is shown is Loaded | Counters reflect the | Pass
+|  On 'Click' to ellipsis, edit/Profile| Redirects to user to edit profile with bio | Pass
+|  On 'save' edit/Profile| Redirects and shows change | Pass
+|  On 'Click' to ellipsis, edit/username| Redirects to user to edit username | Pass
+|  On 'save' edit/username| Redirects and shows change | Pass
+|  On 'Click' to ellipsis, edit/password| Redirects to user to edit password | Pass
+|  On 'save' edit/password| Redirects and doesn't reveal change | Pass
+
+
+## Liked Page
+| Test Description (Liked Front Edit End)   | Expected Outcome | Actual Outcome |
+| ----------- | ----------- | ----- |
+|  On 'Click' to Liked Nav linked to Logged in User Profile | Redirects to user Liked page| Pass
+|  Users pre 'Liked' posts are scoured and listed is Loaded | Posts are loaded | Pass
+|  Search Bar functionaility redefines list based on key word search | Redefined list is shown | Pass
+
+
+## Add Post Page
+| Test Description (Add Post Front Edit End)   | Expected Outcome | Actual Outcome |
+| ----------- | ----------- | ----- |
+|  On 'Click' to Add post Nav linked to Logged in User Profile | Redirects to user Add Page page| Pass
+|  Users have options to add to input post fields | All fields are editable | Pass
+|  Users have options to add to pictures post fields | Pulls up relevant picture search form device | Pass
+|  Users have  | Pulls up relevant picture search form device | Pass
+
+
+
 
 
 ## Automatic testing
