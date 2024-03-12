@@ -20,6 +20,8 @@ import DndEventPage from "./pages/dnd_events/Dnd_EventPage";
 import DndEventEditForm from "./pages/dnd_events/Dnd_EditForm";
 import InitiativePage from "./pages/initiative/initiative";
 import EditInitiativeForm from "./pages/initiative/initiativeEditForm";
+import NotFound from "./components/NotFound";
+
 
 
 function App() {
@@ -103,8 +105,7 @@ function App() {
             path="/profiles/:id/edit"
             render={() => <ProfileEditForm />}
           />
-
-          <Route render={() => <p>Page not found!</p>} />
+          <Route render={() => <NotFound />} />
         </Switch>
       </Container>
     </div>

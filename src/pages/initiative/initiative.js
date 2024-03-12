@@ -35,8 +35,6 @@ function InitiativePage({ message, filter = "", id }) {
   
   // Function to handle fetching initiatives and updating state
   const handleFetchInitiatives = (newInitiative) => {
-    console.log('handleFetchInitiatives invoked');
-    console.log(newInitiative);
     setInitiatives((prevInitiatives) => [...prevInitiatives, newInitiative]);
 };
 
@@ -48,7 +46,7 @@ function InitiativePage({ message, filter = "", id }) {
         const { data } = await axiosReq.get(
           `/initiatives/?page=${page}`
         );
-        console.log('page', page);
+        //console.log('page', page);
         console.table(data.results)
 
         setInitiatives((prevInitiatives) => [
@@ -58,7 +56,7 @@ function InitiativePage({ message, filter = "", id }) {
         setHasLoaded(true);
   
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       } finally {
         setIsLoading(false);
       }

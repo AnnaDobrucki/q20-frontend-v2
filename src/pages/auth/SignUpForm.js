@@ -30,8 +30,6 @@ const SignUpForm = () => {
   });
   const { username, password1, password2 } = signUpData;
 
-  console.log('LINE 29 username: ', username)
-
   const [errors, setErrors] = useState({});
 
   const history = useHistory();
@@ -46,12 +44,11 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      console.log('LINE 45 username: ', username)
       await axios.post("/dj-rest-auth/registration/", signUpData);
 
       history.push("/signin");
     } catch (err) {
-      console.log('ERROR: ',err)
+      //console.log('ERROR: ',err)
       setErrors(err.response?.data);
     }
   };

@@ -173,6 +173,14 @@ After laying the foundations of the site I made sure to re create a new Entity R
 
 ![ Liked page  ](/documentation/README_images/LikedPage.png)
 </details>
+
+### Not Found
+* Sometimes people get things wrong or manage to do something unexpected, I have created a Not Found page for such an occation.
+<details>
+<summary>Not Found </summary>
+
+![ Not Found page  ](/documentation/README_images/NotFound.png)
+</details>
  
  
 ### *Admin Users*

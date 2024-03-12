@@ -40,7 +40,7 @@ function DndEventEditForm() {
              is_owner ? setFormData({ game_name, game_master, event_end, event_location,
              event_start, date, game_description, image, contact }) : history.push("/");
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       }
     };
 

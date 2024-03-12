@@ -52,7 +52,7 @@ const DNDEvent = (props) => {
       await axiosRes.delete(`/dnd_events/${id}/`);
       history.push("/dndevents/");
     } catch (err) {
-      console.log(err)
+      //(err)
         }
   };
 
@@ -93,7 +93,7 @@ const DNDEvent = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err)
+      //console.log(err)
         }
   };
 

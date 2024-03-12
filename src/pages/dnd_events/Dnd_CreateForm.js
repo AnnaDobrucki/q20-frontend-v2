@@ -45,7 +45,7 @@ function DndEventCreateForm() {
       const { data } = await axiosReq.post("/dnd_events/", formDataToSend);
       history.push(`/dndevents/${data.id}`);
     } catch (err) {
-      console.log(err.response)
+      //console.log(err.response)
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
