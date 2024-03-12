@@ -47,7 +47,7 @@ function InitiativePage({ message, filter = "", id }) {
           `/initiatives/?page=${page}`
         );
         //console.log('page', page);
-        console.table(data.results)
+        //console.table(data.results)
 
         setInitiatives((prevInitiatives) => [
           ...prevInitiatives,
