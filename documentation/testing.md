@@ -119,6 +119,8 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 |  If owner/ creator, elipsis is shown | Elipsis with drop down icons for delete or edit | Pass
 |  If owner/ creator, delete button | cascades a delete functionality so event is deleted from API  | Pass
 |  If owner/ creator, edit button | redirects to edit page| Pass
+|  If user goes to event page | they can click responding / unrespond to event| Pass
+
 
 ## Edit Event Page
 | Test Description (Dnd Time Edit Front End)   | Expected Outcome | Actual Outcome |
@@ -160,6 +162,9 @@ See API site for testing [there](https://github.com/AnnaDobrucki/PP5-Q20-API)
 |  On 'save' edit/username| Redirects and shows change | Pass
 |  On 'Click' to ellipsis, edit/password| Redirects to user to edit password | Pass
 |  On 'save' edit/password| Redirects and doesn't reveal change | Pass
+| ----------- | ----------- | ----- |
+|  On 'follow' user-Profile| Adds to profile count on Profile page | Pass
+|  On 'unfollow' user-Profile| Removes from profile count on Profile page | Pass
 
 
 ## Liked Page
